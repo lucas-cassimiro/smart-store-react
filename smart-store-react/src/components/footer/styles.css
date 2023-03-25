@@ -1,0 +1,88 @@
+.container-rodape {
+    width: 100%;
+    height: 20rem;
+    background-color: #DCDCDC;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 32px 0;
+}
+
+.container-rodape .lista-rodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-rodape .lista-rodape .div-li {
+    border-bottom: 1px solid rgba(49, 49, 49, 0.5); 
+    width: 173px;
+    margin-left: 30px;
+}
+
+.container-rodape .lista-rodape .div-li .service {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.container-rodape .institucional .tittle-institucional {
+    font-weight: 600;
+}
+
+.container-rodape .institucional .div-li-institucional {
+    border-bottom: 1px solid rgba(49, 49, 49, 0.5);
+    width: 533px;
+    margin-bottom: .5rem;
+}
+
+.container-rodape .institucional li{
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.container-rodape .institucional a {
+    color: #313131;
+    font-size: 0.875rem;
+}
+
+.lista-institucional {
+    display: flex;
+    gap: 5.937rem;
+}
+
+.redes-sociais {
+    margin-right: 2.625rem;
+}
+
+.redes-sociais .tittle-redes-sociais,
+.redes-sociais .app-smart {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.redes-sociais .icones-redes-sociais {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.redes-sociais .icones-redes-sociais img {
+    width: 2.187rem;
+    height: 2.187rem;
+    border-radius: .312rem;
+}
+
+.numero .sac {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.numero .dias {
+    font-size: .875rem;
+    font-weight: 400;
+    color: #313131;
+    margin-bottom: .5rem;
+}
