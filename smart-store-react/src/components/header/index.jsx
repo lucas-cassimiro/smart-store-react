@@ -1,11 +1,13 @@
 import "./styles.css";
+import * as S from "./styles"
 import IconLocalizaçao from "../../assets/img/icon-localizacao.png";
 import IconCarrinho from "../../assets/img/shopping.png";
 import IconLogin from "../../assets/img/login.png";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header class="container-header">
+    <S.HeaderContainer>
       <div class="topo-header">
         <div class="tittle-header">
           <span>
@@ -59,7 +61,7 @@ const Header = () => {
       <nav class="header-navegation">
         <ul class="header-menu">
           <li>
-            <a href="#">iPhone</a>
+            <NavLink to='/iphones'>iPhone</NavLink>
           </li>
           <li>
             <a href="#">Android</a>
@@ -75,7 +77,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-    </header>
+    </S.HeaderContainer>
   );
 };
 

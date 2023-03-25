@@ -1,16 +1,20 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom"
-import Header from "../../components/header"
-import Home from "../Home"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "../../components/footer";
+import Header from "../../components/header";
+import Home from "../Home";
+import IPhones from "../IPhones";
 
 const AppRouter = () => {
   return (
-<BrowserRouter>
-<Header />
-    <Routes>
+    <BrowserRouter>
+      <Header />
+      <Routes>
         <Route path="/" element={<Home />} />
-    </Routes>
-</BrowserRouter>
-    )
-}
+        <Route path="/iphones" element={<IPhones />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
+};
 
-export default AppRouter
+export default AppRouter;
