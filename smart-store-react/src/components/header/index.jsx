@@ -10,7 +10,7 @@ const Header = () => {
         <div class="tittle-header">
           <span>
             A melhor franquia de smartphones do
-            <span class="brasil-yellow">Brasil</span>
+            <span class="brasil-yellow"> Brasil</span>
           </span>
         </div>
 

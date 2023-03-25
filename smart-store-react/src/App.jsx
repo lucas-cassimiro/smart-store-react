@@ -1,12 +1,13 @@
-import { Footer } from './components/footer'
-import Header from './components/header'
+
+import AppRouter from './pages/Routes'
+
 
 function App() {
 
   return (
     <div>
-        <Header />
-        <Footer/>
+
+        <AppRouter />
     </div>
   )
 }
