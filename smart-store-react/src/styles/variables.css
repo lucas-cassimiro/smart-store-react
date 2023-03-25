@@ -2,22 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@font-face {
+    font-family: 'JejuGothic';
+    src: url(../fonts/jejugothic-regular.ttf);
+ }
 
-body {
-  font-family: 'Inter', sans-serif;;
-  width: 100%;
-}
-
-ul li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+:root {
+    --font-logo: 'Lobster', cursive, sans-serif;
+    --font-text: 'Inter', sans-serif;
+    --font-logo-2: 'Lobster Two', cursive, sans-serif;
+    --font-banner: 'Itim', cursive, sans-serif;
 }
