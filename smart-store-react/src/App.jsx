@@ -1,10 +1,10 @@
-import Header from './components/header'
+import AppRouter from './pages/Routes'
 
 function App() {
 
   return (
     <div>
-        <Header />
+        <AppRouter />
     </div>
   )
 }
