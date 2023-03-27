@@ -4,6 +4,7 @@ import IconCarrinho from "../../assets/img/shopping.png";
 import IconLogin from "../../assets/img/login.png";
 import { Link } from "react-router-dom";
 
+
 const Header = () => {
   return (
     <S.HeaderContainer>
