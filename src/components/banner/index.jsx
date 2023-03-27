@@ -13,7 +13,7 @@ import "swiper/css/autoplay";
 
 const Banner = () => {
     return (
-        <S.SwiperContainer
+        <Swiper
           modules={[Navigation, Pagination, A11y, Autoplay]}
           spaceBetween={50}
           slidesPerView={1}
@@ -28,7 +28,11 @@ const Banner = () => {
           <SwiperSlide><img src={ThirdBanner} alt="Imagem logo banner" /></SwiperSlide>
           <SwiperSlide><img src={FourthBanner} alt="Imagem logo banner" /></SwiperSlide>
           ...
-        </S.SwiperContainer>
+        </Swiper>
+
+        
+
+
       );
 }
 
