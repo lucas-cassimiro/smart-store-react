@@ -1,4 +1,3 @@
-import React from 'react'
 import {SwiperSlide} from "swiper/react"
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import FirstBanner from "../../assets/img/banner-iphone-14.png"
@@ -16,13 +15,18 @@ const Banner = () => {
           slidesPerView={1}
           autoplay={{delay: 4000, disableOnInteraction: false}}
           pagination={{ clickable: true }}
+
         >
           <SwiperSlide><img src={FirstBanner} alt="Imagem logo banner" /></SwiperSlide>
           <SwiperSlide><img src={SecondBanner} alt="Imagem logo banner"/></SwiperSlide>
           <SwiperSlide><img src={ThirdBanner} alt="Imagem logo banner" /></SwiperSlide>
           <SwiperSlide><img src={FourthBanner} alt="Imagem logo banner" /></SwiperSlide>
-          ...
+       
+
+   
+
         </S.SwiperContainer>
+
       );
 }
 
