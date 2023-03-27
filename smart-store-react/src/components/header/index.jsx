@@ -1,82 +1,76 @@
-import "./styles.css";
-import * as S from "./styles"
+import * as S from "./styles";
 import IconLocalizaçao from "../../assets/img/icon-localizacao.png";
 import IconCarrinho from "../../assets/img/shopping.png";
 import IconLogin from "../../assets/img/login.png";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <S.HeaderContainer>
-      <div class="topo-header">
-        <div class="tittle-header">
-          <span>
-            A melhor franquia de smartphones do
-            <span class="brasil-yellow"> Brasil</span>
-          </span>
-        </div>
+      <S.TopoHeader>
+        <p>
+          A melhor franquia de smartphones do
+          <span>Brasil</span>
+        </p>
 
-        <div class="tittle-header-2">
-          <a href="#">
-            <strong>SEJA UM REVENDEDOR</strong>
-          </a>
-        </div>
-      </div>
+        <a href="#">SEJA UM REVENDEDOR</a>
+      </S.TopoHeader>
 
-      <div class="topo-header-2">
-        <div class="localizacao">
+      <S.MeioHeader>
+        <S.Localizacao>
           <img src={IconLocalizaçao} alt="Icone de localização" />
 
           <a href="#">Selecione uma localização</a>
-        </div>
+        </S.Localizacao>
 
-        <h1 class="logo">Smart Store</h1>
+        <h1>
+          <Link to={"/"}>Smart Store</Link>
+        </h1>
 
-        <div class="container-carrinho-login">
-          <div class="carrinho">
-            <picture class="topo-carrinho">
+        <S.CarrinhoELogin>
+          <S.IconContainer>
+            <S.IconsLink to={"/"}>
               <img
                 src={IconCarrinho}
                 alt="Imagem do carrinho"
                 class="img-carrinho"
               />
-            </picture>
-            <div class="rodape-carrinho">
-              <a href="#">Cart</a>
-            </div>
-          </div>
 
-          <div class="login">
-            <div class="topo-login">
+              <p>Cart</p>
+            </S.IconsLink>
+          </S.IconContainer>
+
+          <S.IconContainer>
+            <S.IconsLink to={"/"}>
               <img src={IconLogin} alt="Imagem do login" class="img-login" />
-            </div>
 
-            <div class="rodape-login">
-              <a href="#">Login</a>
-            </div>
-          </div>
-        </div>
-      </div>
+              <p>Login</p>
+            </S.IconsLink>
+          </S.IconContainer>
+        </S.CarrinhoELogin>
+      </S.MeioHeader>
 
-      <nav class="header-navegation">
-        <ul class="header-menu">
+      <S.Navigation>
+        <ul>
           <li>
-            <NavLink to='/iphones'>iPhone</NavLink>
+            <S.NavigationLink to="/iphones">iPhone</S.NavigationLink>
           </li>
           <li>
-            <a href="#">Android</a>
+            <S.NavigationLink to="/android">Android</S.NavigationLink>
           </li>
           <li>
-            <a href="#">Smartwatch</a>
+            <S.NavigationLink to="/smartwatch">Smartwatch</S.NavigationLink>
           </li>
           <li>
-            <a href="#">Fones bluetooth</a>
+            <S.NavigationLink to="/fones-de-ouvido">
+              Fones bluetooth
+            </S.NavigationLink>
           </li>
           <li>
-            <a href="#">Blackfriday</a>
+            <S.NavigationLink to="/blackfriday">Blackfriday</S.NavigationLink>
           </li>
         </ul>
-      </nav>
+      </S.Navigation>
     </S.HeaderContainer>
   );
 };
