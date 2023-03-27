@@ -8,10 +8,12 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Header />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/iphones" element={<IPhones />} />
       </Routes>
+      
       <Footer />
     </BrowserRouter>
   );
