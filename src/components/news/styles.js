@@ -44,13 +44,15 @@ export const ContainerProducts = styled.div`
 
 export const SwiperContainer = styled(Swiper)`
 
-        width: 80%;
+        width: 92.5%;
+        padding: 0 40px;
 
-        .swiper-button-next,
-        .swiper-button-prev{
-            
+        .swiper-button-next{
+            right: var(--swiper-navigation-sides-offset, 0px);
         }
 
-    
 
+        .swiper-button-prev{
+            left: var(--swiper-navigation-sides-offset, 0px);
+        }
 `
