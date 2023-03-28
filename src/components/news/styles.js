@@ -43,6 +43,7 @@ export const ContainerProducts = styled.div`
 `
 
 export const SwiperContainer = styled(Swiper)`
+
         width: 80%;
 
         .swiper-button-next,
@@ -50,5 +51,6 @@ export const SwiperContainer = styled(Swiper)`
             
         }
 
+    
 
 `
