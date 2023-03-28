@@ -43,9 +43,12 @@ export const ContainerProducts = styled.div`
 `
 
 export const SwiperContainer = styled(Swiper)`
-        background-color: red;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        width: 80%;
+
+        .swiper-button-next,
+        .swiper-button-prev{
+            
+        }
+
 
 `
