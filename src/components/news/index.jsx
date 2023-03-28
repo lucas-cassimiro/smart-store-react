@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import SwiperNavButton from "../swiperButton";
 
 const News = () => {
   return (
@@ -14,9 +15,9 @@ const News = () => {
 
       <S.SwiperContainer
         modules={[Navigation, Pagination, A11y, Autoplay]}
-        spaceBetween={0}
+        spaceBetween={50}
         slidesPerView={3}
-        navigation
+       
         // autoplay={{ delay: 4000, disableOnInteraction: false }}
       >
        {NewsData.map(data => (
@@ -36,6 +37,7 @@ const News = () => {
           </S.ContainerProducts>
        </SwiperSlide>
        ))}
+       <SwiperNavButton/>
       </S.SwiperContainer>
     </S.SectionNovidades>
   );
