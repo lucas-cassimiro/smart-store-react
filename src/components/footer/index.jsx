@@ -1,8 +1,8 @@
 import "./styles.css"
-import IconFacebook from "../../assets/img/icone-facebook.png"
-import IconInstagram from "../../assets/img/icone-instagram.png"
-import IconTwitter from "../../assets/img/icone-twitter.png"
-import IconTiktok from "../../assets/img/icone-tiktok.png"
+import IconFacebook from "../../assets/img/icon-facebook.png"
+import IconInstagram from "../../assets/img/icon-instagram.png"
+import IconTwitter from "../../assets/img/icon-twitter.png"
+import IconTiktok from "../../assets/img/icon-tiktok.png"
 
 const Footer = () => {
     return (
