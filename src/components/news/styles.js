@@ -55,4 +55,8 @@ export const SwiperContainer = styled(Swiper)`
         .swiper-button-prev{
             left: var(--swiper-navigation-sides-offset, 0px);
         }
+
+        .swiper-wrapper{
+            z-index: 0;
+        }
 `

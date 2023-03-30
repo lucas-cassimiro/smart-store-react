@@ -22,5 +22,4 @@ export const ButtonRight = styled.button`
     right: 1%;
     top: 50%;
     transform: translateY(-50%);
-    background-color: red;
 `
