@@ -21,7 +21,7 @@ const News = () => {
         // autoplay={{ delay: 4000, disableOnInteraction: false }}
       >
        {NewsData.map(data => (
-          <SwiperSlide>
+          <SwiperSlide key={data.name}>
           <S.ContainerProducts>
             <div>
               <img
