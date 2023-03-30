@@ -11,6 +11,7 @@ const Banner = () => {
     <S.SwiperContainer
       modules={[Navigation, Pagination, A11y, Autoplay]}
       spaceBetween={0}
+      speed={1700}
       slidesPerView={1}
       autoplay={{ delay: 4000, disableOnInteraction: false }}
       pagination={{ clickable: true }}

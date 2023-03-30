@@ -8,6 +8,7 @@ import "swiper/css/autoplay";
 export const SwiperContainer = styled(Swiper)`
   width: 100%;
 
+
   .swiper-slide {
     width: 100%;
     height: 100%;
