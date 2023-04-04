@@ -5,7 +5,7 @@ export const SetaAvancar = styled.img`
 `
 
 export const ButtonLeft = styled.button`
-    background-color: #fff;
+    background-color: transparent ;
     border: 0;
     cursor: pointer;
     position: absolute;
@@ -15,7 +15,7 @@ export const ButtonLeft = styled.button`
 `
 
 export const ButtonRight = styled.button`
-    background-color: #fff;
+    background-color: transparent ;
     border: 0;
     cursor: pointer;
     position: absolute;

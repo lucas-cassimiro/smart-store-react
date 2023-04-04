@@ -21,3 +21,10 @@ export const BlackFridayBannerImage = styled.img`
   align-self: center;
   height: 170px;
 `;
+
+export const BannerWpp = styled.img`
+  align-self: center;
+  height: 170px;
+  width: 1300px;
+  margin-bottom: 45px;
+`
