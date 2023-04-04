@@ -8,6 +8,23 @@ import "swiper/css/autoplay";
 
 export const SwiperContainer = styled(Swiper)`
   margin-top: 50px;
+  margin-bottom: 35px;
+
+  width: 92.5%;
+        padding: 0 40px;
+
+        .swiper-button-next{
+            right: var(--swiper-navigation-sides-offset, 0px);
+        }
+
+
+        .swiper-button-prev{
+            left: var(--swiper-navigation-sides-offset, 0px);
+        }
+
+        .swiper-wrapper{
+            z-index: 0;
+        }
 `;
 
 export const CardDiv = styled.div`
@@ -65,3 +82,9 @@ export const DescriptionContainer = styled.div`
     font-size: 12px;
   }
 `;
+
+export const Images = styled.img`
+  width: 230px;
+  height: 185.92px;
+  object-fit: contain;
+`
