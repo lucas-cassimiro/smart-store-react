@@ -3,6 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y, Autoplay } from "swiper";
 import { products } from "./productsData";
+import HalfRating from "../rating";
 
 const ProductsBanner = () => {
   return (
@@ -24,7 +25,7 @@ const ProductsBanner = () => {
                   <p className="black-friday">Black Friday</p>
                 </div>
                 <h4>{product.name}</h4>
-                starssssssss
+                <HalfRating star={product.star}/>
                 <p className="real-price">R$ {product.price}</p>
                 <p className="discount-price">
                   R${" "}
