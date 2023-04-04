@@ -13,47 +13,55 @@ export const products = [
     price: 2999.99,
     discount: 25,
     img: CaixaJbl,
+    star: 5
   },
   {
     name: "iPhone 13 Mini Azul",
     price: 4999.99,
     discount: 20,
     img: Iphone,
+    star: 4
   },
   {
     name: "Samsung Galaxy S22 Ultra 5G",
     price: 6999.99,
     discount: 20,
     img: SamsungS22,
+    star: 5
   },
   {
     name: "Apple Watch Series 6 44mm Azul",
     price: 2999.99,
     discount: 33,
     img: AppleWatch,
+    star: 5
   },
   {
     name: "VR Box, Óculos VR para Smartphone",
     price: 129.99,
     discount: 23,
     img: OculosVR,
+    star: 4.5
   },
   {
     name: "Carregador iPhone Tipo C - Turbo",
     price: 399.99,
     discount: 12,
     img: CarregadorIphone,
+    star: 3.5
   },
   {
     name: "Smartphone Samsung Galaxy M53 5G",
     price: 2850.14,
     discount: 48,
     img: SamsungM53,
+    star: 4
   },
   {
     name: "Fone de Ouvido Xiaomi Earbuds Basic 2",
     price: 199.99,
     discount: 25,
     img: FoneXiaomi,
+    star: 4.5
   }
 ];
