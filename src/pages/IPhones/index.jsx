@@ -4,18 +4,14 @@ import celulares from "./dataProductsIphone";
 import { CardProducts } from "../../components/cardProducts";
 
 const IPhones = () => {
+
   return (
-    <section>
+    <section style={{display: "flex"}}>
       <Filtro />
-      <div>
-          {   
-            celulares.map(element => {
-              <CardProducts product={element}/>
-            })
-          
-          
-          
-          }
+      <div style={{display: "flex", flexWrap:"wrap"}}>
+        {celulares.map((celular) => (
+          <CardProducts product={celular} key={celular.name}/>
+        ))}
       </div>
     </section>
   );
