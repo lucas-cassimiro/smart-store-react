@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Filtro from "../../components/filtro";
 
 const IPhones = () => {
   return (
-    <div>IPhones</div>
-  )
-}
+    <section>
+      <Filtro />
+    </section>
+  );
+};
 
-export default IPhones
+export default IPhones;
