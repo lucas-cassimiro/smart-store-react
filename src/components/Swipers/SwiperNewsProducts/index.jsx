@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import SwiperSwitchButton from "../swiperSwitchButton";
+import SwiperSwitchButton from "../SwiperSwitchButton";
 
 const SwiperNewsProducts = () => {
   return (
