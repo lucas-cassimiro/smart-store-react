@@ -8,7 +8,8 @@ const celulares = [
       img: Iphone,
       discount: 15,
       blackFriday: true,
-      rating: 4.5
+      rating: 4.5,
+      storage: 64
     },
     {
       name: "Samsung Galaxy S21 Ultra",
@@ -16,7 +17,8 @@ const celulares = [
       img: Iphone,
       discount: 25,
       blackFriday: true,
-      rating: 4
+      rating: 4,
+      storage: 128
     },
     {
       name: "Xiaomi Mi 11 Lite",
@@ -24,7 +26,8 @@ const celulares = [
       img: Iphone,
       discount: 30,
       blackFriday: true,
-      rating: 4.5
+      rating: 4.5,
+      storage: 102
     },
     {
       name: "OnePlus 9 Pro",
@@ -32,7 +35,8 @@ const celulares = [
       img: Iphone,
       discount: 20,
       blackFriday: true,
-      rating: 4
+      rating: 4,
+      storage: 64
     },
     {
       name: "Motorola Moto G Power",
@@ -40,7 +44,8 @@ const celulares = [
       img: Iphone,
       discount: 10,
       blackFriday: false,
-      rating: 3.5
+      rating: 3.5,
+      storage: 512
     },
     {
       name: "Google Pixel 5",
@@ -48,7 +53,8 @@ const celulares = [
       img: Iphone,
       discount: 15,
       blackFriday: true,
-      rating: 4.5
+      rating: 4.5,
+      storage: 64
     },
     {
       name: "ASUS ROG Phone 5",
@@ -56,7 +62,8 @@ const celulares = [
       img: Iphone,
       discount: 20,
       blackFriday: true,
-      rating: 4.5
+      rating: 4.5,
+      storage: 64
     },
     {
       name: "iPhone 12",
@@ -64,7 +71,8 @@ const celulares = [
       img: Iphone,
       discount: 10,
       blackFriday: false,
-      rating: 4
+      rating: 4,
+      storage: 256
     },
     {
       name: "Samsung Galaxy Note 20 Ultra",
@@ -72,7 +80,8 @@ const celulares = [
       img: Iphone,
       discount: 25,
       blackFriday: true,
-      rating: 4
+      rating: 4,
+      storage: 128
     },
     {
       name: "Xiaomi Redmi Note 10",
@@ -80,7 +89,8 @@ const celulares = [
       img: Iphone,
       discount: 30,
       blackFriday: true,
-      rating: 4.5
+      rating: 4.5,
+      storage: 64
     },
     {
       name: "OnePlus Nord 2",
@@ -88,7 +98,8 @@ const celulares = [
       img: Iphone,
       discount: 15,
       blackFriday: true,
-      rating: 4
+      rating: 4,
+      storage: 64
     },
     {
       name: "Motorola Razr 5G",
@@ -96,7 +107,8 @@ const celulares = [
       img: Iphone,
       discount: 30,
       blackFriday: false,
-      rating: 3.5
+      rating: 3.5,
+      storage: 1024
     },
     {
       name: "Google Pixel 4a",
@@ -104,7 +116,8 @@ const celulares = [
       img: Iphone,
       discount: 20,
       blackFriday: true,
-      rating: 4.5
+      rating: 4.5,
+      storage: 64
     },
     {
       name: "ASUS Zenfone 8",
@@ -112,7 +125,8 @@ const celulares = [
       img: Iphone,
       discount: 10,
       blackFriday: false,
-      rating: 4
+      rating: 4,
+      storage: 512
     },
     {
       name: "iPhone SE",
@@ -120,7 +134,8 @@ const celulares = [
       img: Iphone,
       discount: 15,
       blackFriday: true,
-      rating: 4.5
+      rating: 4.5,
+      storage: 64
     },
     {
       name: "Samsung Galaxy A52",
@@ -128,7 +143,8 @@ const celulares = [
       img: Iphone,
       discount: 20,
       blackFriday: true,
-      rating: 4
+      rating: 4,
+      storage: 128
     },
     {
       name: "Xiaomi Poco X3 Pro",
@@ -136,7 +152,8 @@ const celulares = [
       img: Iphone,
       discount: 25,
       blackFriday: true,
-      rating: 4.5
+      rating: 4.5,
+      storage: 64
     },
     {
         name: "OnePlus 8T",
@@ -144,7 +161,8 @@ const celulares = [
         img: Iphone,
         discount: 15,
         blackFriday: true,
-        rating: 4
+        rating: 4,
+        storage: 64
     }
 ]
 
