@@ -1,8 +1,8 @@
 import React from "react";
 import * as S from "./styles.js";
-import HalfRating from "../rating/index.jsx";
+import HalfRating from "../Rating/index.jsx";
 
-export const CardProducts = ({ product }) => {
+const CardProducts = ({ product }) => {
   return (
     <S.CardDiv>
       <S.Images src={product.img} alt={product.name} />
@@ -28,3 +28,5 @@ export const CardProducts = ({ product }) => {
     </S.CardDiv>
   );
 };
+
+export default CardProducts;

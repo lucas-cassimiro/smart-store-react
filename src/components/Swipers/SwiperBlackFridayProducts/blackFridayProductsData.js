@@ -1,11 +1,11 @@
-import CaixaJbl from "../../assets/img/banner-products-som-jbl.png";
-import Iphone from "../../assets/img/banner-products-iphone-image.png";
-import SamsungS22 from "../../assets/img/banner-products-samsung-galaxy.png";
-import AppleWatch from "../../assets/img/banner-products-apple-watch-series.png";
-import OculosVR from "../../assets/img/banner-products-oculos-vr.png";
-import CarregadorIphone from "../../assets/img/banner-products-carregador-iphone.png";
-import SamsungM53 from "../../assets/img/banner-products-smartphone-samsung.png";
-import FoneXiaomi from "../../assets/img/banner-products-fone-de-ouvido.png";
+import CaixaJbl from "../../../assets/img/banner-products-som-jbl.png";
+import Iphone from "../../../assets/img/banner-products-iphone-image.png";
+import SamsungS22 from "../../../assets/img/banner-products-samsung-galaxy.png";
+import AppleWatch from "../../../assets/img/banner-products-apple-watch-series.png";
+import OculosVR from "../../../assets/img/banner-products-oculos-vr.png";
+import CarregadorIphone from "../../../assets/img/banner-products-carregador-iphone.png";
+import SamsungM53 from "../../../assets/img/banner-products-smartphone-samsung.png";
+import FoneXiaomi from "../../../assets/img/banner-products-fone-de-ouvido.png";
 
 export const products = [
   {
