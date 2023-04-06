@@ -1,9 +1,9 @@
-import MiBand4 from "../../assets/img/banner-news-mi-band-4.png";
-import AmazonBipLite from "../../assets/img/banner-news-amazing-bip-lite.png";
-import SamsungWatch from "../../assets/img/banner-news-samsung-watch.png";
-import EchoDot from "../../assets/img/banner-news-echo-dot.png";
-import FireStick from "../../assets/img/banner-news-controle.png";
-import ProjetorSamsung from "../../assets/img/banner-news-projetor-samsung.png";
+import MiBand4 from "../../../assets/img/banner-news-mi-band-4.png";
+import AmazonBipLite from "../../../assets/img/banner-news-amazing-bip-lite.png";
+import SamsungWatch from "../../../assets/img/banner-news-samsung-watch.png";
+import EchoDot from "../../../assets/img/banner-news-echo-dot.png";
+import FireStick from "../../../assets/img/banner-news-controle.png";
+import ProjetorSamsung from "../../../assets/img/banner-news-projetor-samsung.png";
 
 export const NewsData = [
   {

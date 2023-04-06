@@ -1,12 +1,14 @@
+
+
 import { SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper";
-import FirstBanner from "../../assets/img/banner-principal-iphone-14.png";
-import SecondBanner from "../../assets/img/banner-principal-samsung.png";
-import ThirdBanner from "../../assets/img/banner-principal-airpods.png";
-import FourthBanner from "../../assets/img/banner-principal-apple-watch.png";
+import FirstBanner from "../../../assets/img/banner-principal-iphone-14.png";
+import SecondBanner from "../../../assets/img/banner-principal-samsung.png";
+import ThirdBanner from "../../../assets/img/banner-principal-airpods.png";
+import FourthBanner from "../../../assets/img/banner-principal-apple-watch.png";
 import * as S from "./styles";
 
-const Banner = () => {
+const SwipperBannerHeader = () => {
   return (
     <S.SwiperContainer
       modules={[Navigation, Pagination, A11y, Autoplay]}
@@ -32,4 +34,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default SwipperBannerHeader
