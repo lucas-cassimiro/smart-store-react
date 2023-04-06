@@ -27,7 +27,7 @@ const celulares = [
       discount: 30,
       blackFriday: true,
       rating: 4.5,
-      storage: 1024
+      storage: 102
     },
     {
       name: "OnePlus 9 Pro",
