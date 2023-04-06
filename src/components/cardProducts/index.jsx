@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./styles.js";
-import HalfRating from "../Rating/index.jsx";
+import HalfRating from "../rating/index.jsx";
 
 const CardProducts = ({ product }) => {
   return (

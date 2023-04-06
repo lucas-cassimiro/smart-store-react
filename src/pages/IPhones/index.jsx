@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./styles";
-import celulares from "./dataProductsIphone";
-import CardProducts from "../../components/CardProducts";
+import celulares from "./iphoneProductsData.js";
+import CardProducts from "../../components/cardProducts";
 
 const IPhones = () => {
   const [preco, setPreco] = useState("");
