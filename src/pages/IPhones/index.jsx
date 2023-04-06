@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as S from "./styles";
-import celulares from "./dataProductsIphone";
+import celulares from "./iphoneProductsData.js";
 import CardProducts from "../../components/cardProducts";
 
 const IPhones = () => {

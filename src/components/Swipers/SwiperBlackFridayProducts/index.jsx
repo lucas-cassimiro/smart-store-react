@@ -3,8 +3,8 @@ import React from "react";
 import { SwiperSlide } from "swiper/react";
 import { Navigation, A11y, Autoplay } from "swiper";
 import { products } from "./blackFridayProductsData";
-import SwiperSwitchButton from "../swiperSwitchButton";
 import CardProducts from "../../cardProducts";
+import SwiperSwitchButton from "../SwiperSwitchButton";
 
 const SwiperBlackFridayProducts = () => {
   return (
