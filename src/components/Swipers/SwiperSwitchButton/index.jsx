@@ -1,9 +1,9 @@
 import { useSwiper } from "swiper/react";
-import SetaVoltar from "../../assets/img/seta-voltar.png"
+import SetaVoltar from "../../../assets/img/seta-voltar.png"
 import * as S from "./styles"
 import React from "react";
 
-const SwiperNavButton = () => {
+const SwiperSwitchButton = () => {
     const swiper = useSwiper()
 
     return(
@@ -14,4 +14,4 @@ const SwiperNavButton = () => {
     )
 }
 
-export default SwiperNavButton
+export default SwiperSwitchButton
