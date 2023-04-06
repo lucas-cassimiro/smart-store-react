@@ -1,5 +1,3 @@
-
-
 import { SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper";
 import FirstBanner from "../../../assets/img/banner-principal-iphone-14.png";
