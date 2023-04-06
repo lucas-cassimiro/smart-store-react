@@ -4,7 +4,7 @@ import Iphone from "../../assets/img/banner-products-iphone-image.png";
 const celulares = [
     {
       name: "iPhone 13 Pro Max",
-      price: 9999,
+      price: 6999,
       img: Iphone,
       discount: 15,
       blackFriday: true,
