@@ -1,13 +1,12 @@
 import * as S from "./styles";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import { Navigation, A11y, Autoplay } from "swiper";
-import { products } from "./productsData";
-import SwiperNavButton from "../swiperButton";
-import HalfRating from "../rating";
-import { CardProducts } from "../cardProducts";
+import { products } from "./blackFridayProductsData";
+import SwiperSwitchButton from "../SwiperSwitchButton";
+import CardProducts from "../../CardProducts";
 
-const ProductsBanner = () => {
+const SwiperBlackFridayProducts = () => {
   return (
     <div>
       <S.SwiperContainer
@@ -20,13 +19,13 @@ const ProductsBanner = () => {
       >
         {products.map((product) => (
           <SwiperSlide key={product.name}>
-            <CardProducts product={product}/>
+            <CardProducts product={product} />
           </SwiperSlide>
         ))}
-        <SwiperNavButton/>
+        <SwiperSwitchButton />
       </S.SwiperContainer>
     </div>
   );
 };
 
-export default ProductsBanner;
+export default SwiperBlackFridayProducts;
