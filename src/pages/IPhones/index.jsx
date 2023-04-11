@@ -55,7 +55,11 @@ const IPhones = () => {
     }
   }, [preco, armazenamento]);
 
+
+
   console.log(produtos);
+
+  
   return (
     <section style={{ display: "flex" }}>
       <S.FiltroContainer>
