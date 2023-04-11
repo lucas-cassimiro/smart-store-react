@@ -52,7 +52,7 @@ const IPhones = () => {
   useEffect(() => {
     filtrarPorPrecoEArmazenamento(preco, armazenamento);
   }, [preco, armazenamento]);
-
+  
   return (
     <section style={{ display: "flex" }}>
       <S.FiltroContainer>
