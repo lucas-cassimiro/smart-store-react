@@ -7,7 +7,7 @@ const IPhones = () => {
   const [preco, setPreco] = useState("");
   const [armazenamento, setArmazenamento] = useState([]);
   const [cor, setCor] = useState("");
-  const [produtos, setProdutos] = useState(celulares);
+  const [produtos, setProdutos] = useState([]);
 
   const handleChangePreco = (event) => {
     setPreco(event.target.value);
@@ -27,38 +27,31 @@ const IPhones = () => {
     setCor(event.target.value);
   };
 
-  const filtrarPorPreco = (preco) => {
+  const filtrarPorPrecoEArmazenamento = (preco, armazenamento) => {
     const [precoInicial, precoFinal] = preco.split("-");
-    const novoArray = celulares.filter((celular) => {
-      return celular.price > precoInicial && celular.price < precoFinal;
-    });
+
+    let novoArray = celulares;
+
+    if (preco) {
+      novoArray = novoArray.filter((celular) => {
+        return celular.price > precoInicial && celular.price < precoFinal;
+      });
+    }
+
+    if (armazenamento.length > 0) {
+      novoArray = novoArray.filter((celular) => {
+        return armazenamento.some((valor) => {
+          return celular.storage.toString().includes(valor);
+        });
+      });
+    }
 
     setProdutos(novoArray);
   };
 
-  const filtrarPorArmazenamento = (armazenamento) => {
-    const filtrado = armazenamento.map((valor) => {
-      return celulares.filter((celular) => {
-        return celular.storage.toString().includes(valor);
-      });
-    });
-    setProdutos([].concat(...filtrado));
-  };
-
   useEffect(() => {
-    if (preco) filtrarPorPreco(preco);
-
-    if (armazenamento.length > 0) {
-      filtrarPorArmazenamento(armazenamento);
-    }else{
-      setProdutos(celulares)
-    }
+    filtrarPorPrecoEArmazenamento(preco, armazenamento);
   }, [preco, armazenamento]);
-
-
-
-  console.log(produtos);
-
   
   return (
     <section style={{ display: "flex" }}>
@@ -66,6 +59,16 @@ const IPhones = () => {
         <h2>Filtrar por:</h2>
         <S.Filtro>
           <h3>Preço:</h3>
+          <label>
+            <input
+              type="radio"
+              name="preco"
+              value=""
+              checked={preco === ""}
+              onChange={handleChangePreco}
+            />
+            Nenhum
+          </label>
           <label>
             <input
               type="radio"
@@ -244,7 +247,7 @@ const IPhones = () => {
           </label>
         </S.Filtro>
       </S.FiltroContainer>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", width: "80%" }}>
         {produtos.map((celular) => (
           <CardProducts product={celular} key={celular.name} />
         ))}
