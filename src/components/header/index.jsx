@@ -3,8 +3,11 @@ import IconLocalizaçao from "../../assets/img/icon-localizacao.png";
 import IconCarrinho from "../../assets/img/icon-cart.png";
 import IconLogin from "../../assets/img/icon-login.png";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext";
 
 const Header = () => {
+const {productsInCart} = useCartContext()
+
   return (
     <S.HeaderContainer>
       <S.TopoHeader>
@@ -36,7 +39,7 @@ const Header = () => {
                 class="img-carrinho"
               />
 
-              <p>Cart</p>
+              <p>Cart: {productsInCart.length}</p>
             </S.IconsLink>
           </S.IconContainer>
 
