@@ -1,8 +1,10 @@
 import React from "react";
 import * as S from "./styles.js";
 import HalfRating from "../rating/index.jsx";
+import Product from "../../pages/Cart/index.jsx";
 
 const CardProducts = ({ product }) => {
+
   return (
     <S.CardDiv>
       <S.Images src={product.img} alt={product.name} />
@@ -24,6 +26,7 @@ const CardProducts = ({ product }) => {
             1.02
           ).toFixed(2)}
         </p>
+        <button>Adicionar no carrinho</button>
       </S.DescriptionContainer>
     </S.CardDiv>
   );
