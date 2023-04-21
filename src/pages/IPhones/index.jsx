@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as S from "./styles";
 import celulares from "./iphoneProductsData.js";
 import CardProducts from "../../components/cardProducts";
+import { useCartContext } from "../../context/CartContext";
 
 const IPhones = () => {
   const [preco, setPreco] = useState("");
@@ -59,7 +60,7 @@ const IPhones = () => {
   useEffect(() => {
     filtrarPorPrecoEArmazenamento(preco, armazenamento);
   }, [preco, armazenamento]);
-  
+
   return (
     <section style={{ display: "flex" }}>
       <S.FiltroContainer>

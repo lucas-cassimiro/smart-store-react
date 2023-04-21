@@ -1,7 +1,6 @@
 import React from "react";
 import * as S from "./styles.js";
 import HalfRating from "../rating/index.jsx";
-import Product from "../../pages/Cart/index.jsx";
 
 const CardProducts = ({ product }) => {
 
@@ -28,6 +27,8 @@ const CardProducts = ({ product }) => {
         </p>
         <button>Adicionar no carrinho</button>
       </S.DescriptionContainer>
+      <button onClick={() => addAndEditProductsInCart(product)}>Adicionar no carrinho!</button>
+      <button onClick={() => removeProductsInCart(product)}>Remover do carrinho!</button>
     </S.CardDiv>
   );
 };
