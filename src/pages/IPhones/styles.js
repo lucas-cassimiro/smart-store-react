@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const FiltroContainer = styled.section`
-  margin-left: 84px;
+  margin: 50px;
+  width: 200px;
+  
 `;
 
 export const Filtro = styled.div`
