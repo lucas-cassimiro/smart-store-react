@@ -3,6 +3,7 @@ import Footer from "../../components/footer";
 import Header from "../../components/header";
 import Home from "../Home";
 import IPhones from "../IPhones";
+import Cart from "../Cart";
 
 const AppRouter = () => {
   return (
@@ -12,6 +13,7 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/iphones" element={<IPhones />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
 
       {/* <Footer /> */}
