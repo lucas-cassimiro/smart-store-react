@@ -14,7 +14,7 @@ const AppRouter = () => {
         <Route path="/iphones" element={<IPhones />} />
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 };
