@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import * as S from "./styles";
 import celulares from "./iphoneProductsData.js";
 import CardProducts from "../../components/cardProducts";
+import { useCartContext } from "../../context/CartContext";
 
 const IPhones = () => {
   const [preco, setPreco] = useState("");
   const [armazenamento, setArmazenamento] = useState([]);
-  const [cor, setCor] = useState("");
+  const [cor, setCor] = useState([]);
   const [produtos, setProdutos] = useState([]);
-
+  
   const handleChangePreco = (event) => {
     setPreco(event.target.value);
   };
@@ -25,10 +26,17 @@ const IPhones = () => {
 
   const handleChangeCor = (event) => {
     setCor(event.target.value);
+    console.log(cor)
   };
 
   const filtrarPorPrecoEArmazenamento = (preco, armazenamento) => {
+    
+    
     const [precoInicial, precoFinal] = preco.split("-");
+
+    // setPreco((prev) => [...prev, preco])
+
+
 
     let novoArray = celulares;
 
@@ -52,7 +60,7 @@ const IPhones = () => {
   useEffect(() => {
     filtrarPorPrecoEArmazenamento(preco, armazenamento);
   }, [preco, armazenamento]);
-  
+
   return (
     <section style={{ display: "flex" }}>
       <S.FiltroContainer>
@@ -61,7 +69,7 @@ const IPhones = () => {
           <h3>Preço:</h3>
           <label>
             <input
-              type="radio"
+              type="checkbox"
               name="preco"
               value=""
               checked={preco === ""}
@@ -71,7 +79,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="radio"
+              type="checkbox"
               name="preco"
               value="0-1000"
               checked={preco === "0-1000"}
@@ -81,7 +89,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="radio"
+              type="checkbox"
               name="preco"
               value="1001-2000"
               checked={preco === "1001-2000"}
@@ -91,7 +99,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="radio"
+              type="checkbox"
               name="preco"
               value="2001-3000"
               checked={preco === "2001-3000"}
@@ -101,7 +109,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="radio"
+              type="checkbox"
               name="preco"
               value="3001-4000"
               checked={preco === "3001-4000"}
@@ -111,7 +119,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="radio"
+              type="checkbox"
               name="preco"
               value="4001-5000"
               checked={preco === "4001-5000"}
@@ -121,7 +129,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="radio"
+              type="checkbox"
               name="preco"
               value="5001-6000"
               checked={preco === "5001-6000"}
@@ -131,7 +139,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="radio"
+              type="checkbox"
               name="preco"
               value="6001-7000"
               checked={preco === "6001-7000"}

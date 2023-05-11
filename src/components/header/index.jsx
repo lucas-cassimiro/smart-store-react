@@ -2,9 +2,12 @@ import * as S from "./styles";
 import IconLocalizaçao from "../../assets/img/icon-localizacao.png";
 import IconCarrinho from "../../assets/img/icon-cart.png";
 import IconLogin from "../../assets/img/icon-login.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext";
 
 const Header = () => {
+const {productsInCart} = useCartContext()
+
   return (
     <S.HeaderContainer>
       <S.TopoHeader>
@@ -35,8 +38,9 @@ const Header = () => {
                 alt="Imagem do carrinho"
                 class="img-carrinho"
               />
-
-              <p>Cart</p>
+          <Link to={"/cart"}>
+              <p>Cart: {productsInCart.length}</p>
+          </Link>
             </S.IconsLink>
           </S.IconContainer>
 
@@ -53,13 +57,13 @@ const Header = () => {
       <S.Navigation>
         <ul>
           <li>
-            <S.NavigationLink to="/iphones">iPhone</S.NavigationLink>
+            <S.NavigationLink to="/iphones">iPhones</S.NavigationLink>
           </li>
           <li>
-            <S.NavigationLink to="/android">Android</S.NavigationLink>
+            <S.NavigationLink to="/android">Androids</S.NavigationLink>
           </li>
           <li>
-            <S.NavigationLink to="/smartwatch">Smartwatch</S.NavigationLink>
+            <S.NavigationLink to="/smartwatch">Smartwatchs</S.NavigationLink>
           </li>
           <li>
             <S.NavigationLink to="/fones-de-ouvido">
@@ -67,7 +71,7 @@ const Header = () => {
             </S.NavigationLink>
           </li>
           <li>
-            <S.NavigationLink to="/blackfriday">Blackfriday</S.NavigationLink>
+            <S.NavigationLink to="/blackfriday">Black Friday</S.NavigationLink>
           </li>
         </ul>
       </S.Navigation>

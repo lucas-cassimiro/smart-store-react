@@ -1,8 +1,14 @@
 import React from "react";
 import * as S from "./styles.js";
 import HalfRating from "../rating/index.jsx";
+import { useCartContext } from "../../context/CartContext/index.jsx";
+
 
 const CardProducts = ({ product }) => {
+
+  const { addAndEditProductsInCart, removeProductsInCart } = useCartContext()
+
+
   return (
     <S.CardDiv>
       <S.Images src={product.img} alt={product.name} />
@@ -25,6 +31,7 @@ const CardProducts = ({ product }) => {
           ).toFixed(2)}
         </p>
       </S.DescriptionContainer>
+      <button onClick={() => addAndEditProductsInCart(product)}>Adicionar no carrinho!</button>
     </S.CardDiv>
   );
 };
