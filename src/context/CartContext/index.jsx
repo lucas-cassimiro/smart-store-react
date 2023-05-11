@@ -10,15 +10,18 @@ export const CartProvider = ({ children }) => {
       const itemIndex = prevCart.findIndex(
         (item) => item.name === product.name
       );
+
       if (itemIndex >= 0) {
         return prevCart.map((item, index) => {
           if (index === itemIndex) {
-            return { ...item, qtd: item.qtd + 1 };
+            const qtd = item.qtd + 1
+            const value = item.price * qtd
+            return { ...item, qtd: qtd, value: value}
           }
           return item;
         });
       } else {
-        return [...prevCart, { ...product, qtd: 1 }];
+        return [...prevCart, { ...product, qtd: 1, value: product.price }];
       }
     });
   };
@@ -47,9 +50,13 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  console.log(productsInCart)
+
   const removeProductFromCart = (product) => {
     setProductsInCart((prevCart) =>
-      prevCart.filter((item) => item.name !== product.name)
+      prevCart.filter((item) => {
+        return item.name !== product.name
+      })
     );
   };
 
@@ -59,7 +66,7 @@ export const CartProvider = ({ children }) => {
         productsInCart,
         addAndEditProductsInCart,
         removeProductsInCart,
-        removeProductFromCart,
+        removeProductFromCart
       }}
     >
       {children}

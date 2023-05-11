@@ -14,10 +14,9 @@ const Cart = () => {
 
             <>
                 {
-                    productsInCart.map(item => {
+                    productsInCart.map(item => (
                         <ProductInCart product={item}/>
-
-                    })
+                    ))
                 }
             </>
 

@@ -32,7 +32,6 @@ const CardProducts = ({ product }) => {
         </p>
       </S.DescriptionContainer>
       <button onClick={() => addAndEditProductsInCart(product)}>Adicionar no carrinho!</button>
-      <button onClick={() => removeProductsInCart(product)}>Remover do carrinho!</button>
     </S.CardDiv>
   );
 };
