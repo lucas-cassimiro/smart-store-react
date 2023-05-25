@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import * as S from "./styles";
 import celulares from "./iphoneProductsData.js";
 import CardProducts from "../../components/cardProducts";
+import { Head } from "../../components/Head/index.jsx";
+import FilterOrdered from "../../assets/img/ri-list-ordered.png"
 import { useCartContext } from "../../context/CartContext";
 
 const IPhones = () => {
@@ -25,18 +27,17 @@ const IPhones = () => {
   };
 
   const handleChangeCor = (event) => {
-    setCor(event.target.value);
-    console.log(cor)
-  };
+    if(cor.includes(event.target.value)){
+      const filtrado = cor.filter((valor) => {
+        return valor != event.target.value
+      })
+      return setCor(filtrado)
+    }
+    setCor((prev) => [...prev, event.target.value])
+  }
 
-  const filtrarPorPrecoEArmazenamento = (preco, armazenamento) => {
-    
-    
+  const filtrarPorPrecoEArmazenamento = (preco, armazenamento, cor) => {
     const [precoInicial, precoFinal] = preco.split("-");
-
-    // setPreco((prev) => [...prev, preco])
-
-
 
     let novoArray = celulares;
 
@@ -54,17 +55,38 @@ const IPhones = () => {
       });
     }
 
+    if(cor.length > 0){
+      novoArray = novoArray.filter((item) => {
+        return cor.some((valor) => {
+          return item.color.toLowerCase().includes(valor)
+        })
+      })
+    }
+
     setProdutos(novoArray);
   };
 
   useEffect(() => {
-    filtrarPorPrecoEArmazenamento(preco, armazenamento);
-  }, [preco, armazenamento]);
+    filtrarPorPrecoEArmazenamento(preco, armazenamento, cor);
+  }, [preco, armazenamento, cor]);
 
   return (
-    <section style={{ display: "flex" }}>
+    <>
+      <S.Iphones><strong>Você está em: </strong>iPhones</S.Iphones>
+    <S.ContainerGlobal style={{ display: "flex" }}>
+      <Head title='iPhones'/>
       <S.FiltroContainer>
-        <h2>Filtrar por:</h2>
+        <S.CategoriasRelacionadas>
+          <h2>Categoria relacionadas</h2>
+          <p>Androids</p>
+          <p>Smartwatchs</p>
+          <p>Fones bluetooth</p>
+          <p>Acessórios</p>
+        </S.CategoriasRelacionadas>
+        <div>
+          <img src={FilterOrdered}/>
+          <h2>Filtrar por:</h2>
+        </div>
         <S.Filtro>
           <h3>Preço:</h3>
           <label>
@@ -255,12 +277,22 @@ const IPhones = () => {
           </label>
         </S.Filtro>
       </S.FiltroContainer>
-      <div style={{ display: "flex", flexWrap: "wrap", width: "80%" }}>
-        {produtos.map((celular) => (
-          <CardProducts product={celular} key={celular.name} />
-        ))}
+      <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap", width: "80%", justifyContent: "flex-start"}}>
+        <S.ContainerFilter>
+          <label>Ordenar</label>
+          <input></input>
+          <label>Exibir</label>
+          <input></input>
+          <input type="text" placeholder="Pesquisar na categoria"></input>
+        </S.ContainerFilter>
+        <S.Celulares>
+          {produtos.map((product) => (
+            <CardProducts product={product} key={product.name} />
+          ))}
+        </S.Celulares>
       </div>
-    </section>
+    </S.ContainerGlobal>
+    </>
   );
 };
 

@@ -10,7 +10,7 @@ export const SwiperContainer = styled(Swiper)`
   margin-top: 50px;
   margin-bottom: 35px;
 
-  width: 92.5%;
+        width: 92.5%;
         padding: 0 40px;
 
         .swiper-button-next{

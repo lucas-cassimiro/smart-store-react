@@ -7,6 +7,15 @@ export const CardDiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1440px){
+    width: 292px;
+  }
+
+  @media (max-width: 1366px){
+    width: 300px;
+    height: 330px;
+  }
 `;
 
 export const DescriptionContainer = styled.div`
@@ -33,6 +42,8 @@ export const DescriptionContainer = styled.div`
     .black-friday {
       background: #313131;
     }
+
+
   }
 
   h4 {
@@ -54,10 +65,33 @@ export const DescriptionContainer = styled.div`
   .parcelas{
     font-size: 12px;
   }
+
+  @media (max-width: 1366px){
+    h4 {
+      font-size: 13.2px;
+    }
+
+    p {
+      font-size: 13.5px;
+    }
+
+
+  }
+
+
+
 `;
 
 export const Images = styled.img`
   width: 230px;
   height: 185.92px;
   object-fit: contain;
+
+  @media (max-width: 1366px){
+    width: 215px;
+    height: 150px;
+  }
+
+
+
 `

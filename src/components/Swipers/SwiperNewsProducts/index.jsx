@@ -27,7 +27,6 @@ const SwiperNewsProducts = () => {
                 <img src={data.img} alt={data.name} />
               </div>
               <h2>{data.name}</h2>
-
               <p>
                 A partir de <span>R$ {data.price}</span>
               </p>

@@ -13,15 +13,20 @@ export const CartProvider = ({ children }) => {
 
       if (itemIndex >= 0) {
         return prevCart.map((item, index) => {
-          if (index === itemIndex) {
+          if (index === itemIndex && item.blackFriday === true) {
             const qtd = item.qtd + 1
-            const value = item.price * qtd
-            return { ...item, qtd: qtd, value: value}
+            const descontoCalculado = item.price * item.discountPercentage
+            const valorDescontadoAtualizado = item.price - descontoCalculado
+
+            return { ...item, qtd: qtd, value: valorDescontadoAtualizado * qtd}
           }
-          return item;
+            return item;
         });
       } else {
-        return [...prevCart, { ...product, qtd: 1, value: product.price }];
+          const descontoCalculado = product.price  * product.discountPercentage
+          const valorDescontadoAtualizado = product.price - descontoCalculado
+
+          return [...prevCart, { ...product, qtd: 1, value: valorDescontadoAtualizado }];
       }
     });
   };
@@ -36,7 +41,10 @@ export const CartProvider = ({ children }) => {
         return prevCart.map((item, index) => {
           if (index === itemIndex) {
             if (item.qtd > 1) {
-              return { ...item, qtd: item.qtd - 1 };
+              const qtd = item.qtd - 1;
+              // const removeValue = item.value - item.valorDescontadoAtualizado
+
+              return { ...item, qtd: qtd };
             } else {
               return item;
             }
@@ -49,8 +57,6 @@ export const CartProvider = ({ children }) => {
       }
     });
   };
-
-  console.log(productsInCart)
 
   const removeProductFromCart = (product) => {
     setProductsInCart((prevCart) =>

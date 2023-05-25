@@ -45,26 +45,14 @@ export const MeioHeader = styled.div`
   background-color: #313131;
   height: 3.5625rem;
   align-items: center;
-
-  h1 a {
-    -webkit-text-stroke: 1px #074291;
-    font-family: var(--font-logo);
-    color: #fff;
-    position: relative;
-    right: 144px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 30px;
-  }
 `;
 
 export const Localizacao = styled.div`
   color: #a0a0a0;
   display: flex;
-  width: 250px;
   justify-content: flex-start;
-  margin-left: 7.75rem;
+  margin-left: 2rem;
+  width: 33.3%;
 
   a {
     color: #a0a0a0;
@@ -78,10 +66,10 @@ export const Localizacao = styled.div`
 
 export const CarrinhoELogin = styled.div`
   display: flex;
-  width: 100px;
   justify-content: flex-end;
   margin-right: 1.5rem;
   gap: 16px;
+  width: 33.3%;
 `;
 
 export const IconContainer = styled.div`
@@ -126,3 +114,20 @@ export const NavigationLink = styled(NavLink)`
     font-weight: 700;
   }
 `;
+
+export const Logo = styled.div`
+  position: relative;
+  width: 33.3%;
+  text-align: center;
+  z-index: 999;
+
+  h1 a {
+    -webkit-text-stroke: 1px #074291;
+    font-family: var(--font-logo);
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+  }
+`

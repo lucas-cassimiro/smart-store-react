@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
 body {
   font-family: 'Inter', sans-serif;;
-  width: 100%;
+  min-width: 100%;
 }
 
 ul li {
