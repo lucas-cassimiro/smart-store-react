@@ -4,10 +4,12 @@ import BannerWpp from "../../assets/img/banner-wpp.png";
 import SwipperBannerHeader from "../../components/Swipers/SwiperBannerHeader";
 import SwiperNewsProducts from "../../components/Swipers/SwiperNewsProducts";
 import SwiperBlackFridayProducts from "../../components/Swipers/SwiperBlackFridayProducts";
+import { Head } from "../../components/Head/index.jsx";
 
 const Home = () => {
   return (
     <S.HomeContainer>
+      <Head title='Home'/>
       <SwipperBannerHeader />
       <SwiperNewsProducts />
       <S.BlackFriday>Black Friday</S.BlackFriday>

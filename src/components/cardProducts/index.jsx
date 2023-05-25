@@ -2,12 +2,10 @@ import React from "react";
 import * as S from "./styles.js";
 import HalfRating from "../rating/index.jsx";
 import { useCartContext } from "../../context/CartContext/index.jsx";
-
+import { currencyFormat } from "../../helpers/currencyFormat.js";
 
 const CardProducts = ({ product }) => {
-
   const { addAndEditProductsInCart, removeProductsInCart } = useCartContext()
-
 
   return (
     <S.CardDiv>
@@ -19,16 +17,16 @@ const CardProducts = ({ product }) => {
         </div>
         <h4>{product.name}</h4>
         <HalfRating star={product.rating} />
-        <p className="real-price">R$ {product.price}</p>
+        <p className="real-price">{currencyFormat(product.price)}</p>
         <p className="discount-price">
-          R$ {((product.price * (100 - product.discount)) / 100).toFixed(2)}
+          {currencyFormat(((product.price * (100 - product.discount)) / 100).toFixed(2))}
         </p>
         <p className="parcelas">
-          Ou 12x de R${" "}
-          {(
+          Ou 12x de {" "}
+          {currencyFormat((
             ((product.price * (100 - product.discount)) / 100 / 12) *
             1.02
-          ).toFixed(2)}
+          ).toFixed(2))}
         </p>
       </S.DescriptionContainer>
       <button onClick={() => addAndEditProductsInCart(product)}>Adicionar no carrinho!</button>

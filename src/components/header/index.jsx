@@ -11,10 +11,10 @@ const {productsInCart} = useCartContext()
   return (
     <S.HeaderContainer>
       <S.TopoHeader>
-        <p>
-          A melhor franquia de smartphones do
-          <span>Brasil</span>
-        </p>
+          <p>
+            A melhor franquia de smartphones do
+            <span>Brasil</span>
+          </p>
 
         <a href="#">SEJA UM REVENDEDOR</a>
       </S.TopoHeader>
@@ -26,9 +26,11 @@ const {productsInCart} = useCartContext()
           <a href="#">Selecione uma localização</a>
         </S.Localizacao>
 
-        <h1>
-          <Link to={"/"}>Smart Store</Link>
-        </h1>
+       
+       <S.Logo>
+          <h1><Link to={"/"}>Smart Store</Link></h1>
+        </S.Logo>
+        
 
         <S.CarrinhoELogin>
           <S.IconContainer>

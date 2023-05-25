@@ -1,6 +1,8 @@
 import React from "react";
 import * as S from "./styles";
 import { useCartContext } from "../../context/CartContext";
+import { currencyFormat } from "../../helpers/currencyFormat";
+
 
 const ProductInCart = ({ product }) => {
 
@@ -22,7 +24,7 @@ const ProductInCart = ({ product }) => {
         <S.Input type="text" value={product.qtd}></S.Input>
         <S.Button onClick={() => addAndEditProductsInCart(product)}>+</S.Button>
         <S.Button onClick={() => removeProductFromCart(product)}>X</S.Button>
-        <p>Preço: {product.value}</p>
+        <p>Preço: {currencyFormat(product.value)}</p>
       </S.ContainerProduct>
     </S.RecipientProduct>
   );

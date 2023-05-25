@@ -40,6 +40,16 @@ export const ContainerProducts = styled.div`
         width: 100%;
         align-items: center;
         justify-content: center;}
+
+    @media (max-width: 1440px) {
+        height: 29.125rem;
+        width: 23rem;
+    }
+
+    @media (max-width: 1366px) {
+        height: 27.100rem;
+        width: 22rem;
+    }
 `
 
 export const SwiperContainer = styled(Swiper)`
