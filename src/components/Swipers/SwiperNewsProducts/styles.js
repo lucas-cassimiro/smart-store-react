@@ -42,7 +42,7 @@ export const ContainerProducts = styled.div`
         justify-content: center;}
 
     @media (max-width: 1440px) {
-        height: 29.125rem;
+        height: 28.125rem;
         width: 23rem;
     }
 

@@ -23,7 +23,7 @@ export const CartProvider = ({ children }) => {
             return item;
         });
       } else {
-          const descontoCalculado = product.price  * product.discountPercentage
+          const descontoCalculado = product.price * product.discountPercentage
           const valorDescontadoAtualizado = product.price - descontoCalculado
 
           return [...prevCart, { ...product, qtd: 1, value: valorDescontadoAtualizado }];
