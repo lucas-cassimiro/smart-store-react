@@ -13,20 +13,18 @@ export const CartProvider = ({ children }) => {
 
       if (itemIndex >= 0) {
         return prevCart.map((item, index) => {
-          if (index === itemIndex && item.blackFriday === true) {
-            const qtd = item.qtd + 1
-            const descontoCalculado = item.price * item.discountPercentage
-            const valorDescontadoAtualizado = item.price - descontoCalculado
+          if (index === itemIndex) {
+            const qtd = item.qtd + 1;
 
-            return { ...item, qtd: qtd, value: valorDescontadoAtualizado * qtd}
+            return {
+              ...item,
+              qtd: qtd,
+            };
           }
-            return item;
+          return item;
         });
       } else {
-          const descontoCalculado = product.price * product.discountPercentage
-          const valorDescontadoAtualizado = product.price - descontoCalculado
-
-          return [...prevCart, { ...product, qtd: 1, value: valorDescontadoAtualizado }];
+        return [...prevCart, { ...product, qtd: 1 }];
       }
     });
   };
@@ -61,7 +59,7 @@ export const CartProvider = ({ children }) => {
   const removeProductFromCart = (product) => {
     setProductsInCart((prevCart) =>
       prevCart.filter((item) => {
-        return item.name !== product.name
+        return item.name !== product.name;
       })
     );
   };
@@ -72,7 +70,7 @@ export const CartProvider = ({ children }) => {
         productsInCart,
         addAndEditProductsInCart,
         removeProductsInCart,
-        removeProductFromCart
+        removeProductFromCart,
       }}
     >
       {children}

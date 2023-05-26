@@ -13,7 +13,7 @@ const celulares = [
     img: iPhonePreto,
     discount: 15,
     discountPercentage: 0.15,
-    blackFriday: true,
+    blackFriday: false,
     rating: 4.5,
     storage: 64,
     color: "Preto"
