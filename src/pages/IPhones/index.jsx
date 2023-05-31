@@ -7,9 +7,11 @@ import FilterOrdered from "../../assets/img/ri-list-ordered.png"
 import { useCartContext } from "../../context/CartContext";
 
 const IPhones = () => {
-  const [preco, setPreco] = useState("");
+  const [preco, setPreco] = useState('');
   const [armazenamento, setArmazenamento] = useState([]);
   const [cor, setCor] = useState([]);
+  const [filterValue, setFilterValue] = useState('')
+  const [filterName, setFilterName] = useState('')
   const [produtos, setProdutos] = useState([]);
   
   const handleChangePreco = (event) => {
@@ -36,7 +38,15 @@ const IPhones = () => {
     setCor((prev) => [...prev, event.target.value])
   }
 
-  const filtrarPorPrecoEArmazenamento = (preco, armazenamento, cor) => {
+  const handleFilterChange = (event) => {
+    setFilterValue(event.target.value)
+  }
+
+  const handleNameItem = (event) => {
+    setFilterName(event.target.value)
+  }
+
+  const filtrarPorPrecoEArmazenamento = (preco, armazenamento, cor, filterValue, filterName) => {
     const [precoInicial, precoFinal] = preco.split("-");
 
     let novoArray = celulares;
@@ -63,32 +73,64 @@ const IPhones = () => {
       })
     }
 
+    if(filterValue){
+      novoArray = novoArray.filter(procurado => {
+        return procurado.order === filterValue
+      })
+    }
+
+    if(filterName){
+     novoArray = novoArray.filter(item => {
+        return item.name.toLowerCase().includes(filterName.toLowerCase())
+     })
+    }
+
     setProdutos(novoArray);
   };
 
   useEffect(() => {
-    filtrarPorPrecoEArmazenamento(preco, armazenamento, cor);
-  }, [preco, armazenamento, cor]);
+    filtrarPorPrecoEArmazenamento(preco, armazenamento, cor, filterValue, filterName);
+  }, [preco, armazenamento, cor, filterValue, filterName]);
 
   return (
     <>
-      <S.Iphones><strong>Você está em: </strong>iPhones</S.Iphones>
-    <S.ContainerGlobal style={{ display: "flex" }}>
+        <S.ContainerFiltro>
+          <h1><strong>Você está em: </strong>iPhones</h1>
+          <div>
+              <label htmlFor="ordenar">Ordenar:</label>
+              <select id="ordenar" onChange={handleFilterChange}>
+                <option value="procurados">Mais procurados</option>
+                <option value="recentes">Mais recentes</option>
+                <option value="vendidos">Mais vendidos</option>
+              </select>
+              <label>Exibir:</label>
+              <select name="" id="">
+                <option value="">20 por página</option>
+                <option value="">19 por página</option>
+                <option value="">18 por página</option>
+              </select>
+              <input type="text" placeholder="Pesquisar na categoria" value={filterName} onChange={handleNameItem}/>
+            </div>
+         </S.ContainerFiltro>
+         
+    <S.ContainerGlobal>
       <Head title='iPhones'/>
       <S.FiltroContainer>
         <S.CategoriasRelacionadas>
-          <h2>Categoria relacionadas</h2>
-          <p>Androids</p>
-          <p>Smartwatchs</p>
-          <p>Fones bluetooth</p>
-          <p>Acessórios</p>
+          <h2>Categorias relacionadas</h2>
+          <div>
+            <p>Androids</p>
+            <p>Smartwatchs</p>
+            <p>Fones bluetooth</p>
+            <p>Acessórios</p>
+          </div>
         </S.CategoriasRelacionadas>
-        <div>
+        <S.FilterByPrice>
           <img src={FilterOrdered}/>
           <h2>Filtrar por:</h2>
-        </div>
+        </S.FilterByPrice>
         <S.Filtro>
-          <h3>Preço:</h3>
+          <h3>Preço</h3>
           <label>
             <input
               type="checkbox"
@@ -171,7 +213,7 @@ const IPhones = () => {
           </label>
         </S.Filtro>
         <S.Filtro>
-          <h3>Armazenamento:</h3>
+          <h3>Armazenamento</h3>
           <label>
             <input
               type="checkbox"
@@ -224,7 +266,7 @@ const IPhones = () => {
           </label>
         </S.Filtro>
         <S.Filtro>
-          <h3>Cor:</h3>
+          <h3>Cor</h3>
           <label>
             <input
               type="checkbox"
@@ -278,17 +320,11 @@ const IPhones = () => {
         </S.Filtro>
       </S.FiltroContainer>
       <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap", width: "80%", justifyContent: "flex-start"}}>
-        <S.ContainerFilter>
-          <label>Ordenar</label>
-          <input></input>
-          <label>Exibir</label>
-          <input></input>
-          <input type="text" placeholder="Pesquisar na categoria"></input>
-        </S.ContainerFilter>
         <S.Celulares>
-          {produtos.map((product) => (
+          {produtos.length > 1 && produtos.map((product) => (
             <CardProducts product={product} key={product.name} />
           ))}
+          {produtos.length == 0 && <p>Produto não encontrado</p>}
         </S.Celulares>
       </div>
     </S.ContainerGlobal>

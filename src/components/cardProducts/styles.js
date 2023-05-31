@@ -7,7 +7,7 @@ export const CardDiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  
   @media (max-width: 1440px){
     width: 292px;
   }
@@ -42,8 +42,6 @@ export const DescriptionContainer = styled.div`
     .black-friday {
       background: #313131;
     }
-
-
   }
 
   h4 {
@@ -74,12 +72,7 @@ export const DescriptionContainer = styled.div`
     p {
       font-size: 13.5px;
     }
-
-
   }
-
-
-
 `;
 
 export const Images = styled.img`
@@ -91,7 +84,20 @@ export const Images = styled.img`
     width: 215px;
     height: 150px;
   }
+`
 
+export const Button = styled.button`
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+`
 
-
+export const Carrinho = styled.section`
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
 `

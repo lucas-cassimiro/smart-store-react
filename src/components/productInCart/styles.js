@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
 export const RecipientProduct = styled.div`
-    width: 900px;
-    height: 150px;
-    background-color: red;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 `
 
 export const ContainerProduct = styled.div`
     display: flex;
+    background-color: gray;
+    width: 900px;
+    height: 150px;
 `
 
 export const ImageProduct = styled.img`
@@ -21,11 +26,21 @@ export const NameProduct = styled.p`
 `
 
 export const Input = styled.input`
-    height: 30px;
+    height: 15px;
+    width: 15px;
     align-self: center;
 `
 
 export const Button = styled.button`
-    height: 30px;
+    height: 15px;
+    width: 20px;
     align-self: center;
 `
+export const ContainerCarrinho = styled.div`
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+`
+

@@ -12,6 +12,7 @@ export const products = [
     name: "Caixa de som JBL Boombox 2 Preta",
     price: 2999.99,
     discount: 25,
+    blackFriday: true,
     img: CaixaJbl,
     rating: 5
   },
@@ -19,6 +20,7 @@ export const products = [
     name: "iPhone 13 Mini Azul",
     price: 4999.99,
     discount: 20,
+    blackFriday: true,
     img: Iphone,
     rating: 4
   },
@@ -26,6 +28,7 @@ export const products = [
     name: "Samsung Galaxy S22 Ultra 5G",
     price: 6999.99,
     discount: 20,
+    blackFriday: true,
     img: SamsungS22,
     rating: 5
   },
@@ -33,6 +36,7 @@ export const products = [
     name: "Apple Watch Series 6 44mm Azul",
     price: 2999.99,
     discount: 33,
+    blackFriday: true,
     img: AppleWatch,
     rating: 5
   },
@@ -40,6 +44,7 @@ export const products = [
     name: "VR Box, Óculos VR para Smartphone",
     price: 129.99,
     discount: 23,
+    blackFriday: true,
     img: OculosVR,
     rating: 4.5
   },
@@ -47,6 +52,7 @@ export const products = [
     name: "Carregador iPhone Tipo C - Turbo",
     price: 399.99,
     discount: 12,
+    blackFriday: true,
     img: CarregadorIphone,
     rating: 3.5
   },
@@ -54,6 +60,7 @@ export const products = [
     name: "Smartphone Samsung Galaxy M53 5G",
     price: 2850.14,
     discount: 48,
+    blackFriday: true,
     img: SamsungM53,
     rating: 4
   },
@@ -61,6 +68,7 @@ export const products = [
     name: "Fone de Ouvido Xiaomi Earbuds Basic 2",
     price: 199.99,
     discount: 25,
+    blackFriday: true,
     img: FoneXiaomi,
     rating: 4.5
   }
