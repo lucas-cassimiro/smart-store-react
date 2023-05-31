@@ -13,7 +13,7 @@ const IPhones = () => {
   const [filterValue, setFilterValue] = useState('')
   const [filterName, setFilterName] = useState('')
   const [produtos, setProdutos] = useState([]);
-  
+
   const handleChangePreco = (event) => {
     setPreco(event.target.value);
   };
@@ -46,52 +46,53 @@ const IPhones = () => {
     setFilterName(event.target.value)
   }
 
-  const filtrarPorPrecoEArmazenamento = (preco, armazenamento, cor, filterValue, filterName) => {
-    const [precoInicial, precoFinal] = preco.split("-");
-
-    let novoArray = celulares;
+  const filterAll = (preco, armazenamento, cor, filterValue, filterName) => {
+    let filteredProducts = celulares;
 
     if (preco) {
-      novoArray = novoArray.filter((celular) => {
-        return celular.price > precoInicial && celular.price < precoFinal;
-      });
+      const [precoInicial, precoFinal] = preco.split("-");
+      console.log(precoInicial, precoFinal);
+      filteredProducts = filteredProducts.filter(product =>
+        product.price >= Number(precoInicial) && product.price <= Number(precoFinal)
+      );
     }
+
 
     if (armazenamento.length > 0) {
-      novoArray = novoArray.filter((celular) => {
-        return armazenamento.some((valor) => {
-          return celular.storage.toString().includes(valor);
-        });
-      });
+      filteredProducts = filteredProducts.filter(product =>
+        armazenamento.includes(product.storage.toString())
+      );
     }
 
-    if(cor.length > 0){
-      novoArray = novoArray.filter((item) => {
-        return cor.some((valor) => {
-          return item.color.toLowerCase().includes(valor)
-        })
-      })
+    if (cor.length > 0) {
+      filteredProducts = filteredProducts.filter(product =>
+        cor.includes(product.color.toLowerCase())
+      );
     }
 
-    if(filterValue){
-      novoArray = novoArray.filter(procurado => {
-        return procurado.order === filterValue
-      })
+    if (filterValue) {
+      filteredProducts = filteredProducts.filter(product =>
+        product.order === filterValue
+      );
     }
 
-    if(filterName){
-     novoArray = novoArray.filter(item => {
-        return item.name.toLowerCase().includes(filterName.toLowerCase())
-     })
+    if (filterName) {
+      filteredProducts = filteredProducts.filter(product =>
+        product.name.toLowerCase().includes(filterName.toLowerCase())
+      );
     }
+    console.log("storage", armazenamento);
+    console.log("preco", preco);
+    console.log("cor", cor);
 
-    setProdutos(novoArray);
+    setProdutos(filteredProducts);
   };
 
   useEffect(() => {
-    filtrarPorPrecoEArmazenamento(preco, armazenamento, cor, filterValue, filterName);
+    filterAll(preco, armazenamento, cor, filterValue, filterName);
   }, [preco, armazenamento, cor, filterValue, filterName]);
 
+  console.log(produtos.length);
   return (
     <>
         <S.ContainerFiltro>
@@ -133,7 +134,7 @@ const IPhones = () => {
           <h3>Preço</h3>
           <label>
             <input
-              type="checkbox"
+              type="radio"
               name="preco"
               value=""
               checked={preco === ""}
@@ -143,7 +144,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="checkbox"
+              type="radio"
               name="preco"
               value="0-1000"
               checked={preco === "0-1000"}
@@ -153,7 +154,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="checkbox"
+              type="radio"
               name="preco"
               value="1001-2000"
               checked={preco === "1001-2000"}
@@ -163,7 +164,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="checkbox"
+              type="radio"
               name="preco"
               value="2001-3000"
               checked={preco === "2001-3000"}
@@ -173,7 +174,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="checkbox"
+              type="radio"
               name="preco"
               value="3001-4000"
               checked={preco === "3001-4000"}
@@ -183,7 +184,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="checkbox"
+              type="radio"
               name="preco"
               value="4001-5000"
               checked={preco === "4001-5000"}
@@ -193,7 +194,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="checkbox"
+              type="radio"
               name="preco"
               value="5001-6000"
               checked={preco === "5001-6000"}
@@ -203,7 +204,7 @@ const IPhones = () => {
           </label>
           <label>
             <input
-              type="checkbox"
+              type="radio"
               name="preco"
               value="6001-7000"
               checked={preco === "6001-7000"}
@@ -319,9 +320,10 @@ const IPhones = () => {
           </label>
         </S.Filtro>
       </S.FiltroContainer>
+      
       <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap", width: "80%", justifyContent: "flex-start"}}>
         <S.Celulares>
-          {produtos.length > 1 && produtos.map((product) => (
+          {produtos.length && produtos.map((product) => (
             <CardProducts product={product} key={product.name} />
           ))}
           {produtos.length == 0 && <p>Produto não encontrado</p>}
