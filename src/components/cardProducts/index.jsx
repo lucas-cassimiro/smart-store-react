@@ -18,6 +18,7 @@ const CardProducts = ({ product }) => {
           {product.blackFriday && <p className="black-friday">Black Friday</p>}
         </div>
         <h4>{product.name}</h4>
+        <h4>{product.storage} GB</h4>
         <HalfRating star={product.rating} />
 
         {product.blackFriday && (
