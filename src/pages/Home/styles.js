@@ -9,11 +9,11 @@ export const HomeContainer = styled.div`
 export const BlackFriday = styled.h2`
   width: 100%;
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   font-family: "JejuGothic", sans-serif;
-  font-size: 35px;
+  font-size: 2.1875rem;
   font-weight: 400;
-  margin-top: 32px;
+  margin-top: 2rem;
 `;
 
 export const BlackFridayBannerImage = styled.img`

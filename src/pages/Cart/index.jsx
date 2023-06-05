@@ -13,11 +13,14 @@ const Cart = () => {
             <h3>Você está em: carrinhos</h3>
 
             <>
-                {
-                    productsInCart.map(item => (
-                        <ProductInCart product={item}/>
-                    ))
-                }
+                {productsInCart.length >= 1 && productsInCart.map(item => (
+                     <ProductInCart product={item}/>
+                ))}
+                {productsInCart.length == 0 && 
+                        <div>
+                                <p>O seu carrinho ainda se encontra vazio!</p>
+
+                        </div>}
             </>
         </>
     )

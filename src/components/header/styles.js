@@ -17,10 +17,10 @@ export const TopoHeader = styled.div`
   align-items: center;
 
   p {
+    width: 60%;
     display: flex;
     justify-content: flex-end;
     font-size: 0.8rem;
-    width: 60%;
 
     span {
       color: #faff00;
@@ -31,12 +31,17 @@ export const TopoHeader = styled.div`
   a {
     display: flex;
     justify-content: flex-end;
-    width: 40%;
     margin: 1rem;
     font-size: 0.9rem;
     font-weight: 600;
+    width: 40%;
   }
+  
+
 `;
+
+
+
 
 export const MeioHeader = styled.div`
   display: flex;

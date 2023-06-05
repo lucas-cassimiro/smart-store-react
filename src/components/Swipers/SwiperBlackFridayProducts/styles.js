@@ -25,4 +25,8 @@ export const SwiperContainer = styled(Swiper)`
         .swiper-wrapper{
             z-index: 0;
         }
+
+        @media (max-width: 1024px){
+            width: 97%;
+        }
 `;

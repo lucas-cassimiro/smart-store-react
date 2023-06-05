@@ -1,12 +1,16 @@
 import * as S from "./styles";
 import React from "react";
 import { SwiperSlide } from "swiper/react";
-import { Navigation, A11y, Autoplay } from "swiper";
+import Swiper, { Navigation, A11y, Autoplay } from "swiper";
 import { products } from "./blackFridayProductsData";
 import CardProducts from "../../cardProducts";
 import SwiperSwitchButton from "../SwiperSwitchButton";
 
 const SwiperBlackFridayProducts = () => {
+  
+
+
+  
   return (
     <div>
       <S.SwiperContainer

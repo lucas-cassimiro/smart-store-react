@@ -16,6 +16,13 @@ export const CardDiv = styled.div`
     width: 300px;
     height: 330px;
   }
+
+  @media (max-width: 1024px){
+    width: 200px;
+  }
+
+
+
 `;
 
 export const DescriptionContainer = styled.div`
@@ -73,6 +80,39 @@ export const DescriptionContainer = styled.div`
       font-size: 13.5px;
     }
   }
+
+  @media (max-width: 1024px){
+
+    margin-left: 10px;
+
+
+    h4{
+      font-size: 10.4px;
+    }
+
+    div {
+      gap: 5px;
+    }
+
+    p {
+      font-size: 10px;
+    }
+
+    .discount-price {
+      font-size: 14px;
+    }
+
+
+
+
+
+
+  }
+
+
+
+
+
 `;
 
 export const Images = styled.img`
@@ -84,6 +124,14 @@ export const Images = styled.img`
     width: 215px;
     height: 150px;
   }
+
+  @media (max-width: 1024px){
+    width: 130px;
+    object-fit: contain;
+    margin-right: 10px;
+  }
+
+
 `
 
 export const Button = styled.button`
@@ -100,4 +148,10 @@ export const Carrinho = styled.section`
   display: flex;
   justify-content: space-between;
   width: 210px;
+
+  @media (max-width: 1024px){
+    width: 150px;
+  }
+
+
 `

@@ -14,6 +14,9 @@ const SwiperNewsProducts = () => {
       <S.Novidades>Novidades</S.Novidades>
 
       <S.SwiperContainer
+    
+
+
         modules={[Navigation, Pagination, A11y, Autoplay]}
         spaceBetween={50}
         slidesPerView={3}
@@ -24,7 +27,7 @@ const SwiperNewsProducts = () => {
           <SwiperSlide key={data.name}>
             <S.ContainerProducts>
               <div>
-                <img src={data.img} alt={data.name} />
+                <S.Img src={data.img} alt={data.name} />
               </div>
               <h2>{data.name}</h2>
               <p>

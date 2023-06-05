@@ -16,7 +16,9 @@ const {productsInCart} = useCartContext()
             <span>Brasil</span>
           </p>
 
-        <a href="#">SEJA UM REVENDEDOR</a>
+      
+          <a href="#">SEJA UM REVENDEDOR</a>
+       
       </S.TopoHeader>
 
       <S.MeioHeader>
@@ -39,6 +41,7 @@ const {productsInCart} = useCartContext()
                 src={IconCarrinho}
                 alt="Imagem do carrinho"
                 class="img-carrinho"
+                
               />
           <Link to={"/cart"}>
               <p>Cart: {productsInCart.length}</p>

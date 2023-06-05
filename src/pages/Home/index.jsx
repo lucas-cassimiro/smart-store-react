@@ -5,6 +5,7 @@ import SwipperBannerHeader from "../../components/Swipers/SwiperBannerHeader";
 import SwiperNewsProducts from "../../components/Swipers/SwiperNewsProducts";
 import SwiperBlackFridayProducts from "../../components/Swipers/SwiperBlackFridayProducts";
 import { Head } from "../../components/Head/index.jsx";
+import { BannerWppp, BannerNovidades } from "../../components/Banners/index.jsx";
 
 const Home = () => {
   return (
@@ -13,12 +14,9 @@ const Home = () => {
       <SwipperBannerHeader />
       <SwiperNewsProducts />
       <S.BlackFriday>Black Friday</S.BlackFriday>
-      <S.BlackFridayBannerImage
-        src={BlackFridayBanner}
-        alt="Banner Black Friday"
-      />
+      <BannerNovidades/>
       <SwiperBlackFridayProducts />
-      <S.BannerWpp src={BannerWpp} />
+      <BannerWppp/>
     </S.HomeContainer>
   );
 };
