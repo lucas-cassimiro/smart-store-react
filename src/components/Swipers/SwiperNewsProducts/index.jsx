@@ -9,11 +9,37 @@ import "swiper/css/autoplay";
 import SwiperSwitchButton from "../SwiperSwitchButton";
 
 const SwiperNewsProducts = () => {
+
   return (
     <S.SectionNovidades>
       <S.Novidades>Novidades</S.Novidades>
 
       <S.SwiperContainer
+
+      
+        breakpoints={
+          {
+            420: {
+              spaceBetween: 2,
+              slidesPerView: 10
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40
+              
+            },
+            1024: {
+              spaceBetween: 50
+            },
+            1366: {
+              spaceBetween: 41
+            }
+          }
+
+        }
+
+
+
     
 
 

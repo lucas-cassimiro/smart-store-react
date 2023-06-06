@@ -29,4 +29,5 @@ export const SwiperContainer = styled(Swiper)`
         @media (max-width: 1024px){
             width: 97%;
         }
+
 `;

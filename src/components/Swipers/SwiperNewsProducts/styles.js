@@ -17,6 +17,10 @@ export const Novidades = styled.h1`
     font-weight: 400;
     margin-top: 2rem;
 
+
+    
+
+
     @media (max-width: 420px){
         font-size: 14px;
     }
@@ -64,6 +68,23 @@ export const ContainerProducts = styled.div`
         }
     }
 
+    @media (max-width: 768px){
+        height: 19.100rem;
+        width: 12rem;
+
+        div {
+            height: 230px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+
     @media (max-width: 420px){
         height: 10rem;
         width: 6rem;
@@ -75,8 +96,6 @@ export const ContainerProducts = styled.div`
         p {
             font-size: 10px;
         }
-
-
     }
 `
 
@@ -93,6 +112,12 @@ export const SwiperContainer = styled(Swiper)`
             width: 98%;
         }
 
+        @media (max-width: 768px){
+            width: 97%;
+        }
+
+
+
         @media (max-width: 420px){
             width: 88%;
         }
@@ -104,8 +129,15 @@ export const SwiperContainer = styled(Swiper)`
 export const Img = styled.img`
     @media (max-width: 1024px){
         height: 210px;
-        width: 215px;
+        width: 235px;
     }
+
+    @media (max-width: 768px){
+        width: 160px;
+        height: 150px;
+    }
+
+
 
     @media (max-width: 420px){
         height: 50px;

@@ -113,6 +113,11 @@ const IPhones = () => {
       novoArray = novoArray.slice(0, display)
     }
 
+
+    console.log(novoArray)
+
+
+
     setProdutos(novoArray);
   };
 
@@ -186,7 +191,7 @@ const IPhones = () => {
               checked={preco.includes('0-1000')}
               onChange={handleChangePreco}
             />
-            Até R$ 1.000
+            R$ 0 - R$1000
           </label>
           <label>
             <input
