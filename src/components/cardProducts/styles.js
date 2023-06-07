@@ -1,31 +1,25 @@
 import styled from "styled-components";
 
 export const CardDiv = styled.div`
-  width: 300px;
   height: 375px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  @media (max-width: 1440px){
-    width: 292px;
-  }
-
-  @media (max-width: 1366px){
-    width: 300px;
-    height: 330px;
-  }
+  margin-left: 10px;
 
   @media (max-width: 1024px){
-    width: 200px;
+    margin-left: 0;
   }
 
   @media (max-width: 768px){
-    width: 160px;
+    margin-left: 25px; 
   }
 
-
+  @media (max-width: 420px){
+    margin-left: 17px;
+    width: 150px;
+  }
 
 `;
 
@@ -75,54 +69,39 @@ export const DescriptionContainer = styled.div`
     font-size: 12px;
   }
 
-  @media (max-width: 1366px){
-    h4 {
-      font-size: 13.2px;
-    }
-
-    p {
-      font-size: 13.5px;
-    }
-  }
-
-  @media (max-width: 1024px){
-
-    margin-left: 15px;
-
-
-    h4{
-      font-size: 10.4px;
-    }
+  @media (max-width: 768px){
 
     div {
-      gap: 5px;
+      gap: 7px;
+
+      p {
+        font-size: 0.875rem;
+      }
     }
 
-    p {
-      font-size: 10px;
+    h4 {
+      font-size: 0,8215rem;
     }
 
     .discount-price {
-      font-size: 14px;
+      font-size: 12px;
+    }
+
+    .parcelas {
+      font-size: 11px;
     }
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 420px){
+    div {
+      display: block;
+    }
+
     h4 {
-      font-size: 8px;
-    }
-
-    p {
-      padding: 3px 5px;
-      font-size: 6px;
+      font-size: 0.775rem;
     }
 
   }
-
-
-
-
-
 `;
 
 export const Images = styled.img`
@@ -140,8 +119,14 @@ export const Images = styled.img`
   }
 
   @media (max-width: 768px){
-    width: 120px;
+    width: 150.3px;
   }
+
+  @media (max-width: 420px){
+    width: 130px;
+  }
+
+
 
 
 `
@@ -154,6 +139,12 @@ export const Button = styled.button`
     align-items: center;
     justify-content: center;
     font-size: 23px;
+
+    @media (max-width: 420px){
+      font-size: 18px;
+    }
+
+
 `
 
 export const Carrinho = styled.section`
@@ -161,7 +152,9 @@ export const Carrinho = styled.section`
   justify-content: space-between;
   width: 210px;
 
-  @media (max-width: 1024px){
-    width: 150px;
+  @media (max-width: 420px){
+    width: 135px;
   }
+
+
 `

@@ -13,6 +13,11 @@ export const Container = styled.div`
         margin-right: 50px;
     }
 
+    @media (max-width: 420px){
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
 
 `
 

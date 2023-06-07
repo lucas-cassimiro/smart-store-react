@@ -1,24 +1,59 @@
 import * as S from "./styles";
 import React from "react";
 import { SwiperSlide } from "swiper/react";
-import Swiper, { Navigation, A11y, Autoplay } from "swiper";
+import Swiper, { Navigation, Pagination, A11y, Autoplay } from "swiper";
+// import Swiper, { Navigation, Pagination, A11y} from "swiper";
 import { products } from "./blackFridayProductsData";
 import CardProducts from "../../cardProducts";
 import SwiperSwitchButton from "../SwiperSwitchButton";
 
 const SwiperBlackFridayProducts = () => {
-  
-
-
-  
   return (
     <div>
       <S.SwiperContainer
-        modules={[Navigation, A11y, Autoplay]}
+
+          breakpoints={
+            {
+              320: {
+                spaceBetween: 50,
+                slidesPerView: 2,
+              },
+              768: {
+                spaceBetween: 1,
+                slidesPerView: 2,
+                modules: [Navigation, A11y],
+                pagination: false
+              },
+              1024: {
+                spaceBetween: 50,
+                slidesPerView: 3
+              },
+              1336: {
+                slidesPerView: 4
+              }
+
+
+
+                
+            }
+          }
+
+        // modules={[Navigation, Pagination, A11y, Autoplay]}
+        // spaceBetween={0}
+        // speed={1700}
+        // slidesPerView={1}
+        // autoplay={{ delay: 4000, disableOnInteraction: false }}
+        // pagination={{ clickable: true }}
+
+
+
+
+
+        modules={[Navigation, Pagination, A11y]}
         spaceBetween={24}
         speed={1000}
         slidesPerView={4}
-        // navigation
+       // pagination={{ clickable: true }}
         // autoplay={{ delay: 4000, disableOnInteraction: false }}
       >
         {products.map((product) => (

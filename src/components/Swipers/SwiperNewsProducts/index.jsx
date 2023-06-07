@@ -1,5 +1,5 @@
 import { SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y, Autoplay } from "swiper";
+import Swiper, { Navigation, Pagination, A11y, Autoplay } from "swiper";
 import * as S from "./styles";
 import { NewsData } from "./newsProductsData";
 import "swiper/css";
@@ -19,20 +19,33 @@ const SwiperNewsProducts = () => {
       
         breakpoints={
           {
-            420: {
-              spaceBetween: 2,
-              slidesPerView: 10
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 40
+            320: {
+              spaceBetween: 15,
+              slidesPerView: 2,
+              // modules: [Navigation, Pagination, A11y, Autoplay],
               
             },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 41,
+              pagination: false
+            },
             1024: {
-              spaceBetween: 50
+              slidesPerView: 3,
+              spaceBetween: 50,
+              pagination: false
             },
             1366: {
-              spaceBetween: 41
+              slidesPerView: 3,
+              spaceBetween: 41,
+              pagination: false
+            },
+            1440: {
+              slidesPerView: 3,
+              spaceBetween: 50
+            },
+            1920: {
+              slidesPerView: 3
             }
           }
 
@@ -47,6 +60,7 @@ const SwiperNewsProducts = () => {
         spaceBetween={50}
         slidesPerView={3}
         speed={1000}
+        pagination={{ clickable: true }}
         // autoplay={{ delay: 4000, disableOnInteraction: false }}
       >
         {NewsData.map((data) => (

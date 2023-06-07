@@ -17,7 +17,7 @@ export const products = [
     rating: 5
   },
   {
-    name: "iPhone 13 Mini Azul",
+    name: "iPhone 13 Mini, Azul claro 256GB",
     price: 4999.99,
     discount: 20,
     blackFriday: true,
@@ -57,7 +57,7 @@ export const products = [
     rating: 3.5
   },
   {
-    name: "Smartphone Samsung Galaxy M53 5G",
+    name: "Smartphone Samsung Galaxy M53",
     price: 2850.14,
     discount: 48,
     blackFriday: true,

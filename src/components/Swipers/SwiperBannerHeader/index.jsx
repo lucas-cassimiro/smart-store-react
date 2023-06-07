@@ -7,6 +7,7 @@ import FourthBanner from "../../../assets/img/banner-principal-apple-watch.png";
 import * as S from "./styles";
 
 const SwipperBannerHeader = () => {
+
   return (
     <S.SwiperContainer
       modules={[Navigation, Pagination, A11y, Autoplay]}

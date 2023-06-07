@@ -38,4 +38,17 @@ export const SwiperContainer = styled(Swiper)`
       background-color: #313131;
     }
   }
+
+  @media (max-width: 420px){
+
+    .swiper-pagination {
+      margin-top: 15px;
+    }
+
+    &.swiper-pagination-bullet,
+    span {
+      width: 50px;
+      height: 6px;
+    }
+  }
 `;
