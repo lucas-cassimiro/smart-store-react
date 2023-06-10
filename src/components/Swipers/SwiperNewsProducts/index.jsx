@@ -22,8 +22,6 @@ const SwiperNewsProducts = () => {
             320: {
               spaceBetween: 15,
               slidesPerView: 2,
-              // modules: [Navigation, Pagination, A11y, Autoplay],
-              
             },
             768: {
               slidesPerView: 2,
@@ -42,26 +40,20 @@ const SwiperNewsProducts = () => {
             },
             1440: {
               slidesPerView: 3,
-              spaceBetween: 50
+              spaceBetween: 50,
+              pagination: false
             },
             1920: {
               slidesPerView: 3
             }
           }
-
         }
-
-
-
-    
-
 
         modules={[Navigation, Pagination, A11y, Autoplay]}
         spaceBetween={50}
         slidesPerView={3}
         speed={1000}
-       // pagination={{ clickable: true }}
-        // autoplay={{ delay: 4000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
       >
         {NewsData.map((data) => (
           <SwiperSlide key={data.name}>

@@ -27,7 +27,27 @@ export const SwiperContainer = styled(Swiper)`
         }
 
         @media (max-width: 420px){
-          //  margin-top: 10px;
             padding: 0;
+
+            .swiper-pagination {
+                margin-top: 20px;
+                position: relative;
+              }
+              
+              &.swiper-pagination-bullet {
+                width: 100px;
+                height: 11px;
+                background: #9e9e9ede;
+                opacity: 1;
+                border: 0;
+                cursor: pointer;
+                transition: 0.3s ease-in-out;
+                border-radius: 0;
+            
+                &.swiper-pagination-bullet-active {
+                  background-color: #313131;
+                }
+
+
         }
 `;

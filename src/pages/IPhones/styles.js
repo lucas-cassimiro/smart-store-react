@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const ContainerFiltro = styled.div`
-  display: flex;
+    display: flex;
 
   h1 {
     margin-top: 32px;
@@ -78,20 +78,17 @@ export const ContainerFiltro = styled.div`
       }
     }
 
+    @media (max-width: 768px){
+      width: 40%;
+    }
+
 
 
 
 
   }
 }
-    
-    
-    
-    // @media (max-width: 1366px){
-    //   select{
-    //     font-size: 15.8px;
-    //   }
-    // }
+  
 
 `
 

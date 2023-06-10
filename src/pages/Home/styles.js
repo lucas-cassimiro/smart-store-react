@@ -16,7 +16,7 @@ export const BlackFriday = styled.h2`
   margin-top: 2rem;
 
   @media (max-width: 420px){
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       margin-top: 0.5rem;
     }
 

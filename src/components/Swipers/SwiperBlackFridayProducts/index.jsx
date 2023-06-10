@@ -26,35 +26,21 @@ const SwiperBlackFridayProducts = () => {
               },
               1024: {
                 spaceBetween: 50,
-                slidesPerView: 3
+                slidesPerView: 3,
+                pagination: false
               },
-              1336: {
-                slidesPerView: 4
+              1366: {
+                slidesPerView: 4,
+                pagination: false
               }
-
-
-
-                
             }
           }
-
-        // modules={[Navigation, Pagination, A11y, Autoplay]}
-        // spaceBetween={0}
-        // speed={1700}
-        // slidesPerView={1}
-        // autoplay={{ delay: 4000, disableOnInteraction: false }}
-        // pagination={{ clickable: true }}
-
-
-
-
 
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={24}
         speed={1000}
         slidesPerView={4}
-       // pagination={{ clickable: true }}
-        // autoplay={{ delay: 4000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
       >
         {products.map((product) => (
           <SwiperSlide key={product.name}>

@@ -39,7 +39,7 @@ export const TopoHeader = styled.div`
   
   @media (max-width: 420px){
     p {
-      font-size: 0.625rem;
+      font-size: 0.6rem;
     }
 
     a {
@@ -47,7 +47,7 @@ export const TopoHeader = styled.div`
     }
   }
 
-  @media (max-width: 320px){
+  @media (max-width: 360px){
     p {
       font-size: 0.5rem;
    
