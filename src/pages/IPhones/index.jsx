@@ -361,14 +361,14 @@ const IPhones = () => {
           </label>
         </S.Filtro>
       </S.FiltroContainer>
-      <div style={{ display: "flex", flexDirection: "column", flexWrap: "wrap", width: "80%", justifyContent: "flex-start"}}>
+      <>
         <S.Celulares>
           {produtos.length >= 1 && produtos.map((product) => (
             <CardProducts product={product} key={product.name} />
           ))}
           {produtos.length == 0 && <p>Produto não encontrado</p>}
         </S.Celulares>
-      </div>
+      </>
     </S.ContainerGlobal>
     </>
   );

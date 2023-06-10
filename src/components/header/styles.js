@@ -37,6 +37,31 @@ export const TopoHeader = styled.div`
     width: 40%;
   }
   
+  @media (max-width: 420px){
+    p {
+      font-size: 0.625rem;
+    }
+
+    a {
+      font-size: 0.7rem;
+    }
+  }
+
+  @media (max-width: 320px){
+    p {
+      font-size: 0.5rem;
+   
+    }
+
+    a {
+      font-size: 0.6rem;
+      width: 38%;
+    }
+  }
+
+
+
+
 
 `;
 
@@ -50,6 +75,14 @@ export const MeioHeader = styled.div`
   background-color: #313131;
   height: 3.5625rem;
   align-items: center;
+
+  @media (max-width: 420px){
+    height: 3rem;
+  }
+
+
+
+
 `;
 
 export const Localizacao = styled.div`
@@ -67,6 +100,25 @@ export const Localizacao = styled.div`
     margin-right: 0.5rem;
     width: 15px;
   }
+
+  @media (max-width: 420px){
+
+    margin-left: 0.5rem;
+    align-items: center;
+
+    a {
+      font-size: 10px;
+    }
+
+    img {
+     height: 17px;
+     width: 12px;
+    }
+  }
+
+  
+
+
 `;
 
 export const CarrinhoELogin = styled.div`
@@ -75,6 +127,19 @@ export const CarrinhoELogin = styled.div`
   margin-right: 1.5rem;
   gap: 16px;
   width: 33.3%;
+
+  @media (max-width: 420px){
+    margin-right: 0.5rem;
+    gap: 0;
+    font-size: 12px;
+  }
+
+  @media (max-width: 320px){
+   font-size: 11px;
+  }
+
+
+
 `;
 
 export const IconContainer = styled.div`
@@ -82,6 +147,12 @@ export const IconContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 420px){
+    width: 40px;
+  }
+
+
 `;
 
 export const IconsLink = styled(Link)`
@@ -94,19 +165,54 @@ export const IconsLink = styled(Link)`
   p {
     color: #dcdcdc;
   }
+
+  @media (max-width: 420px){
+    img {
+      width: 1rem;
+    }
+  }
+
+  @media (max-width: 320px){
+    width: 3rem;
+  }  
 `;
 
 export const Navigation = styled.nav`
   width: 100%;
   background-color: #313131;
+  border-top: 0.0625rem solid;
+
+  button {
+    background-color: transparent;
+    border: none;
+    margin-left: 20px;
+    font-size: 20px;
+    color: white;
+    display: none;
+  }
 
   ul {
     display: flex;
     justify-content: space-evenly;
     height: 3rem;
     align-items: center;
-    border-top: 0.0625rem solid;
     font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px){
+    height: 2rem;
+    display: flex;
+    align-items: center;
+
+    button {
+      display: block;
+      display: flex;
+      align-items: center;
+    }
+
+    ul {
+      display: none;
+    }
   }
 `;
 
@@ -126,6 +232,12 @@ export const Logo = styled.div`
   text-align: center;
   z-index: 999;
 
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   h1 a {
     -webkit-text-stroke: 1px #074291;
     font-family: var(--font-logo);
@@ -134,5 +246,26 @@ export const Logo = styled.div`
     font-weight: 400;
     font-size: 24px;
     line-height: 30px;
+  }
+
+  @media (max-width: 420px){
+    h1 a {
+      font-size: 20px;
+    }
+  }
+
+ 
+  
+
+
+
+`
+export const Botao = styled.button`
+  width: 50px;
+  height: 50px;
+  display: none;
+
+  @media (max-width: 768px){
+    display: block;
   }
 `

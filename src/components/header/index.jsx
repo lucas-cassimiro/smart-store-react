@@ -4,6 +4,8 @@ import IconCarrinho from "../../assets/img/icon-cart.png";
 import IconLogin from "../../assets/img/icon-login.png";
 import { Link, NavLink } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
+import IconHamburguer from "../../assets/img/menu-hamburguer.jpg"
+import { FaBars } from 'react-icons/fa'
 
 const Header = () => {
 const {productsInCart} = useCartContext()
@@ -23,9 +25,9 @@ const {productsInCart} = useCartContext()
 
       <S.MeioHeader>
         <S.Localizacao>
-          <img src={IconLocalizaçao} alt="Icone de localização" />
+        <img src={IconLocalizaçao} alt="Icone de localização" />
 
-          <a href="#">Selecione uma localização</a>
+        <a href="#">Selecione uma localização</a>
         </S.Localizacao>
 
        
@@ -36,20 +38,18 @@ const {productsInCart} = useCartContext()
 
         <S.CarrinhoELogin>
           <S.IconContainer>
-            <S.IconsLink to={"/"}>
+            <S.IconsLink to={"/cart"}>
               <img
                 src={IconCarrinho}
                 alt="Imagem do carrinho"
                 class="img-carrinho"
                 
               />
-          <Link to={"/cart"}>
               <p>Cart: {productsInCart.length}</p>
-          </Link>
             </S.IconsLink>
-          </S.IconContainer>
+            </S.IconContainer>
 
-          <S.IconContainer>
+            <S.IconContainer>
             <S.IconsLink to={"/"}>
               <img src={IconLogin} alt="Imagem do login" class="img-login" />
 
@@ -60,6 +60,9 @@ const {productsInCart} = useCartContext()
       </S.MeioHeader>
 
       <S.Navigation>
+        <button>
+          <FaBars/> 
+        </button>
         <ul>
           <li>
             <S.NavigationLink to="/iphones">iPhones</S.NavigationLink>
@@ -71,9 +74,7 @@ const {productsInCart} = useCartContext()
             <S.NavigationLink to="/smartwatch">Smartwatchs</S.NavigationLink>
           </li>
           <li>
-            <S.NavigationLink to="/fones-de-ouvido">
-              Fones bluetooth
-            </S.NavigationLink>
+            <S.NavigationLink to="/fones-de-ouvido">Fones bluetooth</S.NavigationLink>
           </li>
           <li>
             <S.NavigationLink to="/blackfriday">Black Friday</S.NavigationLink>

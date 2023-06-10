@@ -14,6 +14,14 @@ export const BlackFriday = styled.h2`
   font-size: 2.1875rem;
   font-weight: 400;
   margin-top: 2rem;
+
+  @media (max-width: 420px){
+      font-size: 1.4rem;
+      margin-top: 0.5rem;
+    }
+
+
+
 `;
 
 export const BlackFridayBannerImage = styled.img`

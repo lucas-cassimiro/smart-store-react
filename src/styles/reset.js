@@ -10,8 +10,9 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  font-family: 'Inter', sans-serif;;
+  font-family: 'Inter', sans-serif;
   width: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 ul li {

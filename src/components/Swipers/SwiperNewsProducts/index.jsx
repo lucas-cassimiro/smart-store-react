@@ -60,7 +60,7 @@ const SwiperNewsProducts = () => {
         spaceBetween={50}
         slidesPerView={3}
         speed={1000}
-        pagination={{ clickable: true }}
+       // pagination={{ clickable: true }}
         // autoplay={{ delay: 4000, disableOnInteraction: false }}
       >
         {NewsData.map((data) => (
@@ -71,7 +71,7 @@ const SwiperNewsProducts = () => {
               </div>
               <h2>{data.name}</h2>
               <p>
-                A partir de <span>R$ {data.price}</span>
+                A partir de <span>R${data.price}</span>
               </p>
             </S.ContainerProducts>
           </SwiperSlide>

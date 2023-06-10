@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const CardDiv = styled.div`
   height: 375px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 10px;
+  margin-left: 16.5px;
 
   @media (max-width: 1024px){
     margin-left: 0;
@@ -17,8 +18,12 @@ export const CardDiv = styled.div`
   }
 
   @media (max-width: 420px){
-    margin-left: 17px;
+    margin-left: 20px;
     width: 150px;
+  }
+
+  @media (max-width: 320px){
+    margin-left: 0px;
   }
 
 `;
@@ -93,8 +98,22 @@ export const DescriptionContainer = styled.div`
   }
 
   @media (max-width: 420px){
+
+    gap: 7px;
+
+
     div {
       display: block;
+
+      p {
+        padding: 4px 14px;
+        font-weight: 500;
+        font-size: 13px;
+      }
+
+      
+
+
     }
 
     h4 {
@@ -123,7 +142,7 @@ export const Images = styled.img`
   }
 
   @media (max-width: 420px){
-    width: 130px;
+    width: 120px;
   }
 
 

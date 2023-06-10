@@ -9,13 +9,13 @@ import SwiperSwitchButton from "../SwiperSwitchButton";
 
 const SwiperBlackFridayProducts = () => {
   return (
-    <div>
+    <>
       <S.SwiperContainer
 
           breakpoints={
             {
               320: {
-                spaceBetween: 50,
+                spaceBetween: 5,
                 slidesPerView: 2,
               },
               768: {
@@ -63,7 +63,7 @@ const SwiperBlackFridayProducts = () => {
         ))}
         <SwiperSwitchButton />
       </S.SwiperContainer>
-    </div>
+    </>
   );
 };
 

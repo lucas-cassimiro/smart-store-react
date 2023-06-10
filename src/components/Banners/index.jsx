@@ -15,9 +15,9 @@ const BannerNovidades = () => {
 const BannerWppp = () => {
     return (
         <>
-            <S.Container> 
+            <S.ContainerWpp> 
                 <S.Img src={ImageBanner}/>
-            </S.Container>
+            </S.ContainerWpp>
         </>
     )
 }

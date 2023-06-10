@@ -7,8 +7,8 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
 export const SwiperContainer = styled(Swiper)`
-  margin-top: 50px;
-  margin-bottom: 35px;
+ // margin-top: 3.125rem;
+    margin-bottom: 2.1875rem;
 
         width: 97%;
         padding: 0 40px;
@@ -27,6 +27,7 @@ export const SwiperContainer = styled(Swiper)`
         }
 
         @media (max-width: 420px){
+          //  margin-top: 10px;
             padding: 0;
         }
 `;

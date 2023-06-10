@@ -12,7 +12,7 @@ export const ContainerFiltro = styled.div`
   }
   
   div {
-    width: 60%;
+    width:  65%;
     height: 60px;
     border-bottom: 1px solid black;
     margin-left: 150px;
@@ -59,31 +59,39 @@ export const ContainerFiltro = styled.div`
     }
 
     @media (max-width: 1024px){
-  
-      width: 55%;
+      width: 56%;
 
-
-  
       select {
-        width: 100px;
-        height: 50px;
+        width: 114px;
+        height: 35px;
       }
   
       input {
-        width: 100px;
-        height: 50px;
+        width: 150px;
+        height: 35px;
+        
+         
+      ::placeholder,
+      ::-webkit-input-placeholder {
+        font-size: 12px;
+      }
       }
     }
+
+
+
+
+
   }
 }
     
     
     
-    @media (max-width: 1366px){
-      select{
-        font-size: 15.8px;
-      }
-    }
+    // @media (max-width: 1366px){
+    //   select{
+    //     font-size: 15.8px;
+    //   }
+    // }
 
 `
 
@@ -150,17 +158,9 @@ export const Celulares = styled.div`
   margin-left: 100px;
   gap: 50px;
 
-  @media (max-width: 1366px){
-    margin-left: 90px;
-    gap: 30px;
+  @media (max-width: 1367px){
+    gap: 10px;
   }
-
-  @media (max-width: 1024px){
-    margin-left: 80px;
-    gap: 5px;
-  }
-
-
 `
 
 export const FilterByPrice = styled.div`

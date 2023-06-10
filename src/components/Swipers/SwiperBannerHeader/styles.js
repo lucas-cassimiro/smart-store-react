@@ -42,7 +42,7 @@ export const SwiperContainer = styled(Swiper)`
   @media (max-width: 420px){
 
     .swiper-pagination {
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     &.swiper-pagination-bullet,
