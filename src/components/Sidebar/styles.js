@@ -14,7 +14,6 @@ export const Container = styled.div`
     > svg {
         position: fixed;
         color: white;
-        width: 250px;
         height: 30px;
         display: flex;
         margin-top: 32px;
@@ -34,16 +33,10 @@ export const Container = styled.div`
 
     @media (max-width: 420px){
         width: 200px;
-        svg {
-          width: 50px;
-        }
     }
 
     @media (max-width: 320px){
         width: 150px;
-        svg {
-            width: 20px;
-        }
     }
 `
 
