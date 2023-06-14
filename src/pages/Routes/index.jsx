@@ -5,7 +5,9 @@ import Home from "../Home";
 import IPhones from "../IPhones";
 import Cart from "../Cart";
 import Androids from "../Androids";
-
+import { Location } from "../Location";
+import Smartwatchs from "../Smartwatchs";
+import Fones from "../FonesBlutetooth";
 
 
 const AppRouter = () => {
@@ -18,7 +20,10 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/iphones" element={<IPhones />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/android" element={<Androids/>}/>
+        <Route path="/android" element={<Androids/>} />
+        <Route path="/localizacao" element={<Location/>} />
+        <Route path="/smartwatch" element={<Smartwatchs/>} />
+        <Route path="/fones-de-ouvido" element={<Fones/>} />
       </Routes>
 
       <Footer />

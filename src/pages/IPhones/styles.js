@@ -2,13 +2,20 @@ import styled from "styled-components";
 
 
 export const ContainerFiltro = styled.div`
-    display: flex;
+   display: flex;
 
   h1 {
     margin-top: 32px;
     margin-left: 84px;
     font-size: 16px;
     font-weight: 400;
+
+    @media (max-width: 420px){
+      margin-left: 20px;
+    }
+
+
+
   }
   
   div {
@@ -79,8 +86,20 @@ export const ContainerFiltro = styled.div`
     }
 
     @media (max-width: 768px){
-      width: 40%;
+      width: 75%;
+      margin-left: -100px;
     }
+
+    @media (max-width: 420px){
+      width: 10%;
+      border: none;
+      margin-left: 60px;
+      margin-top: 60px;
+      margin-bottom: 100px;
+    }
+
+  
+
 
 
 
@@ -112,6 +131,20 @@ export const FiltroContainer = styled.section`
     h2 {
       font-size: 20px;
     }
+  }
+
+    @media (max-width: 420px){
+      margin-left: 20px;
+
+      div {
+        h2 {
+          font-size: 18px;
+        }
+      }
+    }
+
+
+
 `;
 
 export const CategoriasRelacionadas = styled.div`
@@ -158,6 +191,12 @@ export const Celulares = styled.div`
   @media (max-width: 1367px){
     gap: 10px;
   }
+
+  @media (max-width: 420px){
+    margin-left: 10px;
+  }
+
+
 `
 
 export const FilterByPrice = styled.div`

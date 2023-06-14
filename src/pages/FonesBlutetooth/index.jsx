@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import * as S from "../IPhones/styles";
-import { celulares } from "./samsungProductsData";
+import  celulares from "./fonesProductsData";
 import CardProducts from "../../components/cardProducts";
 import { Head } from "../../components/Head/index.jsx";
 import FilterOrdered from "../../assets/img/ri-list-ordered.png"
 import { useCartContext } from "../../context/CartContext";
 
-const Androids = () => {
+const Fones = () => {
   const [preco, setPreco] = useState([]);
   const [armazenamento, setArmazenamento] = useState([]);
   const [cor, setCor] = useState([]);
@@ -128,7 +128,7 @@ const Androids = () => {
   return (
     <>
         <S.ContainerFiltro>
-          <h1><strong>Você está em: </strong>Androids</h1>
+          <h1><strong>Você está em: </strong>Fones Bluetooth</h1>
           <div>
               <label htmlFor="ordenar">Ordenar:</label>
               <select id="ordenar" onChange={handleFilterChange}>
@@ -374,4 +374,4 @@ const Androids = () => {
   );
 };
 
-export default Androids;
+export default Fones;

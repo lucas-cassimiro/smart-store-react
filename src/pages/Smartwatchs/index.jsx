@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import * as S from "../IPhones/styles";
-import { celulares } from "./samsungProductsData";
+import { celulares } from "./smartwatchsProductsData.js";
 import CardProducts from "../../components/cardProducts";
 import { Head } from "../../components/Head/index.jsx";
 import FilterOrdered from "../../assets/img/ri-list-ordered.png"
 import { useCartContext } from "../../context/CartContext";
 
-const Androids = () => {
+const Smartwatchs = () => {
   const [preco, setPreco] = useState([]);
   const [armazenamento, setArmazenamento] = useState([]);
   const [cor, setCor] = useState([]);
@@ -58,7 +58,7 @@ const Androids = () => {
   }
 
 
-  const filtrarPorPrecoEArmazenamento = (preco, armazenamento, cor, filterValue, filterName, display) => {
+  const filterAll = (preco, armazenamento, cor, filterValue, filterName, display) => {
     let novoArray = celulares;
 
     var valorMin = []
@@ -122,13 +122,13 @@ const Androids = () => {
   };
 
   useEffect(() => {
-    filtrarPorPrecoEArmazenamento(preco, armazenamento, cor, filterValue, filterName, display);    
+    filterAll(preco, armazenamento, cor, filterValue, filterName, display);    
   }, [preco, armazenamento, cor, filterValue, filterName, display]);
 
   return (
     <>
         <S.ContainerFiltro>
-          <h1><strong>Você está em: </strong>Androids</h1>
+          <h1><strong>Você está em: </strong>Smartwatchs</h1>
           <div>
               <label htmlFor="ordenar">Ordenar:</label>
               <select id="ordenar" onChange={handleFilterChange}>
@@ -374,4 +374,4 @@ const Androids = () => {
   );
 };
 
-export default Androids;
+export default Smartwatchs;

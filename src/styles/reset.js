@@ -19,6 +19,10 @@ ul li {
   list-style: none;
 }
 
+ol {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;

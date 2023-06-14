@@ -58,7 +58,7 @@ const IPhones = () => {
   }
 
 
-  const filtrarPorPrecoEArmazenamento = (preco, armazenamento, cor, filterValue, filterName, display) => {
+  const filterAll = (preco, armazenamento, cor, filterValue, filterName, display) => {
     let novoArray = celulares;
 
     var valorMin = []
@@ -122,7 +122,7 @@ const IPhones = () => {
   };
 
   useEffect(() => {
-    filtrarPorPrecoEArmazenamento(preco, armazenamento, cor, filterValue, filterName, display);    
+    filterAll(preco, armazenamento, cor, filterValue, filterName, display);    
   }, [preco, armazenamento, cor, filterValue, filterName, display]);
 
   return (

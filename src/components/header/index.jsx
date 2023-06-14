@@ -6,16 +6,21 @@ import { Link, NavLink } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import IconHamburguer from "../../assets/img/menu-hamburguer.jpg"
 import { FaBars } from 'react-icons/fa'
+import { useState } from "react";
+import Sidebar from "../Sidebar";
 
 const Header = () => {
-const {productsInCart} = useCartContext()
+  const {productsInCart} = useCartContext()
+
+  const [sidebar, setSidebar] = useState(false)
+
+  const showSidebar = () => setSidebar(!sidebar)
 
   return (
     <S.HeaderContainer>
       <S.TopoHeader>
           <p>
-            A melhor franquia de smartphones do
-            <span>Brasil</span>
+            A melhor franquia de smartphones do<span>Brasil</span>
           </p>
 
       
@@ -27,10 +32,10 @@ const {productsInCart} = useCartContext()
         <S.Localizacao>
         <img src={IconLocalizaçao} alt="Icone de localização" />
 
-        <a href="#">Selecione uma localização</a>
+        <Link to={"/localizacao"}>
+          Selecione uma localização
+        </Link>
         </S.Localizacao>
-
-       
        <S.Logo>
           <h1><Link to={"/"}>Smart Store</Link></h1>
         </S.Logo>
@@ -60,8 +65,9 @@ const {productsInCart} = useCartContext()
       </S.MeioHeader>
 
       <S.Navigation>
-        <button>
-          <FaBars/> 
+        <button onClick={showSidebar}>
+          <FaBars/>
+          {sidebar && <Sidebar active={setSidebar}/>} 
         </button>
         <ul>
           <li>

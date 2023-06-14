@@ -49,24 +49,16 @@ export const TopoHeader = styled.div`
 
   @media (max-width: 360px){
     p {
-      font-size: 0.5rem;
+      font-size: 0.455rem;
    
     }
 
     a {
-      font-size: 0.6rem;
+      font-size: 0.550rem;
       width: 38%;
     }
   }
-
-
-
-
-
 `;
-
-
-
 
 export const MeioHeader = styled.div`
   display: flex;
@@ -172,7 +164,7 @@ export const IconsLink = styled(Link)`
     }
   }
 
-  @media (max-width: 320px){
+  @media (max-width: 420px){
     width: 3rem;
   }  
 `;
