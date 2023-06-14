@@ -35,14 +35,14 @@ export const Container = styled.div`
     @media (max-width: 420px){
         width: 200px;
         svg {
-            width: 120px;
+          width: 50px;
         }
     }
 
     @media (max-width: 320px){
         width: 150px;
         svg {
-            width: 40px;
+            width: 20px;
         }
     }
 `
