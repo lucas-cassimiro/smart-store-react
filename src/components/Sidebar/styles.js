@@ -17,7 +17,7 @@ export const Container = styled.div`
         height: 30px;
         display: flex;
         margin-top: 32px;
-        margin-left: 100px;
+        margin-left: 60px;
         cursor: pointer;
     }
 
