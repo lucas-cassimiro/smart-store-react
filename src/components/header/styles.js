@@ -39,17 +39,17 @@ export const TopoHeader = styled.div`
   
   @media (max-width: 420px){
     p {
-      font-size: 0.6rem;
+      font-size: 0.5rem;
     }
 
     a {
-      font-size: 0.7rem;
+      font-size: 0.6rem;
     }
   }
 
   @media (max-width: 360px){
     p {
-      font-size: 0.4rem;
+      font-size: 0.45rem;
    
     }
 
