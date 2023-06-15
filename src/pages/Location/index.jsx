@@ -20,7 +20,7 @@ export function Location(){
   }
 
     return (
-        <div className='App'>
+        <div>
         <form onSubmit={handleCepChange}>
             <label htmlFor="">Informe um cep: </label>
             <input name="cep" value={inputCep} onChange={(e) => setInputCep(e.target.value)}/>

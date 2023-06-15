@@ -128,7 +128,7 @@ const Fones = () => {
   return (
     <>
         <S.ContainerFiltro>
-          <h1><strong>Você está em: </strong>Fones Bluetooth</h1>
+          <h1><strong>Você está em: </strong>Fones</h1>
           <div>
               <label htmlFor="ordenar">Ordenar:</label>
               <select id="ordenar" onChange={handleFilterChange}>

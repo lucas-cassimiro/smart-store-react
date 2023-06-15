@@ -7,15 +7,19 @@ export const ContainerFiltro = styled.div`
   h1 {
     margin-top: 32px;
     margin-left: 84px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
 
     @media (max-width: 420px){
-      margin-left: 20px;
+      margin-left: 1.25rem;
     }
 
-
-
+    @media (max-width: 320px){
+      margin-top: 1.25rem;
+      margin-left: 0.625rem;
+      font-size: 0.8125rem;
+      
+    }
   }
   
   div {
@@ -87,7 +91,8 @@ export const ContainerFiltro = styled.div`
 
     @media (max-width: 768px){
       width: 75%;
-      margin-left: -100px;
+      margin-left: -150px;
+  
     }
 
     @media (max-width: 420px){
@@ -98,12 +103,13 @@ export const ContainerFiltro = styled.div`
       margin-bottom: 100px;
     }
 
-  
+    @media (max-width: 320px){
+      margin-left: 0px;
 
-
-
-
-
+      input {
+        width: 114px;
+      }
+    }
 
   }
 }
@@ -143,6 +149,20 @@ export const FiltroContainer = styled.section`
       }
     }
 
+    @media (max-width: 320px){
+      margin-left: 10px;
+
+
+      div {
+        h2 {
+          font-size: 1rem;
+        }
+      }
+    }
+
+   
+
+
 
 
 `;
@@ -165,6 +185,10 @@ export const CategoriasRelacionadas = styled.div`
     gap: 8px;
   }
 
+  @media (max-width: 320px){
+    font-size: 14px;
+  }
+
 `
 
 export const Filtro = styled.div`
@@ -173,13 +197,25 @@ export const Filtro = styled.div`
 
   h3 {
     font-weight: 600;
-    font-size: 17px;
+    font-size: 1.0625rem;
     margin: 16px 0;
   }
 
   input {
       margin: 8px;
     }
+
+    @media (max-width: 320px){
+      h3 {
+        font-size: 0.9375rem;
+      }
+      
+      font-size: 0.8125rem;
+    }
+  
+
+
+
 `;
 
 export const Celulares = styled.div`
@@ -196,9 +232,16 @@ export const Celulares = styled.div`
     margin-left: 10px;
   }
 
+  @media (max-width: 320px){
+    margin-left: -50px;
+  }
+
 
 `
 
 export const FilterByPrice = styled.div`
     margin-top: 37px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 `

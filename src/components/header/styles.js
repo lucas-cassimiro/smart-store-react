@@ -236,13 +236,13 @@ export const Logo = styled.div`
     color: #fff;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 30px;
   }
 
   @media (max-width: 420px){
     h1 a {
-      font-size: 20px;
+      font-size: 21px;
     }
   }
 

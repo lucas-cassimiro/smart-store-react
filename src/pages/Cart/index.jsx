@@ -1,29 +1,55 @@
-import ProductInCart from "../../components/productInCart"
-import { useCartContext } from "../../context/CartContext"
+// import ProductInCart from "../../components/productInCart";
+// import { useCartContext } from "../../context/CartContext";
 import { Head } from "../../components/Head/index.jsx";
-import * as S from "./styles"
-
+import * as S from "./styles";
+// import { useEffect, useState } from "react";
+import { Table } from "./Table";
 
 const Cart = () => {
-    const { productsInCart } = useCartContext()
+  // const [windowWidth, setWindowWidth] = useState(document.documentElement.clientWidth)
 
-    return(
-        <>
-            <Head title='Carrinho'/>
-            <h3>Você está em: carrinhos</h3>
+  // const { productsInCart } = useCartContext();
 
-            <>
-                {productsInCart.length >= 1 && productsInCart.map(item => (
-                     <ProductInCart product={item}/>
-                ))}
-                {productsInCart.length == 0 && 
-                        <div>
-                                <p>O seu carrinho ainda se encontra vazio!</p>
+  // useEffect(() => {
+  //   function updateTableComponentBasedInWindowWidth(){
+  //     const currentWidth = document.documentElement.clientWidth
+  //     setWindowWidth(currentWidth)
+  //   }
+  // }, [])
 
-                        </div>}
-            </>
-        </>
-    )
-}
+  // return (
+  //   <>
+  //     <Head title="Carrinho" />
+  // <h3>
+  //   <strong>Você está em: </strong>carrinhos
+  // </h3>
 
-export default Cart
+  //     <>
+  //       <S.ContainerProduct>
+  //         {productsInCart.length >= 1 && <ProductInCart />}
+  //       </S.ContainerProduct>
+  //     </>
+
+  //     {productsInCart.length == 0 && (
+  //       <>
+  //         <p>O seu carrinho ainda se encontra vazio!</p>
+  //       </>
+  //     )}
+  //   </>
+  // );
+
+  return (
+    <>
+      <Head title="Carrinho" />
+      <h3>
+        <strong>Você está em: </strong>carrinhos
+      </h3>
+
+      <S.Container>
+        <Table />
+      </S.Container>
+    </>
+  );
+};
+
+export default Cart;
