@@ -8,7 +8,7 @@ export const Container = styled.div`
   justify-content: space-between;
 
   button {
-    background: red;
+    background: #E03131;
     width: 100%;
     max-width: 16.5rem;
     min-height: 4rem;
@@ -23,6 +23,10 @@ export const Container = styled.div`
     color: #ffffff;
 
     transition: background 0.3s;
+
+    &:hover{
+        background: #AA2424;
+    }
   }
 
   span {
