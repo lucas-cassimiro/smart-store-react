@@ -1,41 +1,42 @@
-import "./styles.css";
 import IconFacebook from "../../assets/img/icon-facebook.png";
 import IconInstagram from "../../assets/img/icon-instagram.png";
 import IconTwitter from "../../assets/img/icon-twitter.png";
 import IconTiktok from "../../assets/img/icon-tiktok.png";
+import IconBaixeAqui from "../../assets/img/icone-baixe-aqui.svg"
+
 import * as S from "./styles"
 
 const Footer = () => {
   return (
     <S.Container>
-      <S.Ul>
-        <S.Li>
-          <S.Navegation href="#">
+      <ul>
+        <li>
+          <a href="#">
             Nossas lojas
-          </S.Navegation>
-        </S.Li>
-        <S.Li>
-          <S.Navegation href="#">
+          </a>
+        </li>
+        <li>
+          <a href="#">
             Suporte
-          </S.Navegation>
-        </S.Li>
-        <S.Li>
-          <S.Navegation href="#">
+          </a>
+        </li>
+        <li>
+          <a href="#">
             Minha conta
-          </S.Navegation>
-        </S.Li>
-        <S.Li>
-          <S.Navegation href="#">
+          </a>
+        </li>
+        <li>
+          <a href="#">
             Serviços
-          </S.Navegation>
-        </S.Li>
-      </S.Ul>
+          </a>
+        </li>
+      </ul>
 
-      <S.Ul>
+      <ul>
       <div>
-        <S.Tittle>Institucional</S.Tittle>
+        <h1>Institucional</h1>
       </div>
-      <div>
+      <div className="div">
         <div>
           <li>
             <a href="">Sobre</a>
@@ -78,15 +79,15 @@ const Footer = () => {
         </div>
 
       </div>
-      </S.Ul>
+      </ul>
 
-      <S.Sac>
+      <div>
         <h2>Sac 4002-8922</h2>
         <span>Segunda a sexta das 08h às 20h</span>
         <span>Sábados das 08h às 19h</span>
-      </S.Sac>
+      </div>
 
-      <S.RedesSociais>
+      <div>
         <h2>Redes sociais</h2>
         <div>
           <img src={IconFacebook}/>
@@ -95,8 +96,8 @@ const Footer = () => {
           <img src={IconTiktok}/>
         </div>
         <h3>App Smart fidelidade</h3>
-        <img></img>
-      </S.RedesSociais>
+        <img src={IconBaixeAqui}/>
+      </div>
     </S.Container>
   );
 };

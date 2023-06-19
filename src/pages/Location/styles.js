@@ -1,4 +1,4 @@
-// import styled from "styled-components";
+import styled from "styled-components";
 
 // export const Container = styled.div`
 //     position: relative;
@@ -10,3 +10,17 @@
 //     position: absolute;
 //     z-index: 999;
 // `
+
+export const Container = styled.div`
+    margin-top: 50px;
+
+    form {
+       input {
+            margin-top: 10px;
+        }
+    }
+
+    p:nth-child(2) {
+        margin-top: 10px;
+    }
+`

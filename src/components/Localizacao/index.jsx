@@ -4,8 +4,6 @@ import { Location } from "../../pages/Location";
 
 import { FaTimes } from "react-icons/fa";
 
-
-
 import * as S from "./styles"
 
 const Localizacao = ({ active }) => {

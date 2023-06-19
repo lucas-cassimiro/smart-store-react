@@ -36,7 +36,9 @@ export function Location() {
             }));
         }
     }, []);
+  
     return (
+      
         <div>
             <form onSubmit={handleCepChange}>
                 <label htmlFor="">Informe um cep: </label>
@@ -68,4 +70,5 @@ export function Location() {
             )}
         </div>
     );
+
 }
