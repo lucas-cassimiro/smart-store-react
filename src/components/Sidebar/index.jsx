@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Content } from "./styles"
 import { FaTimes } from "react-icons/fa";
 import * as S from "./styles"
 import { Link } from "react-router-dom";
@@ -10,8 +9,8 @@ const Sidebar = ({ active }) => {
     }
 
     return (
-        <S.Container sidebar={active}>
-            <FaTimes onClick={closeSidebar} />
+        <S.Container sidebar={active} >
+            <FaTimes onClick={closeSidebar}/>
             <S.Content>
             <ol>
                 <li>

@@ -8,6 +8,8 @@ import IconHamburguer from "../../assets/img/menu-hamburguer.jpg"
 import { FaBars } from 'react-icons/fa'
 import { useState } from "react";
 import Sidebar from "../Sidebar";
+import Localizacao from "../Localizacao";
+
 
 const Header = () => {
   const {productsInCart} = useCartContext()
@@ -15,6 +17,15 @@ const Header = () => {
   const [sidebar, setSidebar] = useState(false)
 
   const showSidebar = () => setSidebar(!sidebar)
+
+
+
+
+  const [location, setLocation] = useState(false)
+
+  const showLocation = () => setLocation(!location)
+
+
 
   return (
     <S.HeaderContainer>
@@ -32,9 +43,14 @@ const Header = () => {
         <S.Localizacao>
         <img src={IconLocalizaçao} alt="Icone de localização" />
 
-        <Link to={"/localizacao"}>
+
+      
+        <a onClick={showLocation}>
           Selecione uma localização
-        </Link>
+          </a>
+        {location && <Localizacao active={setLocation}/>}
+        
+
         </S.Localizacao>
        <S.Logo>
           <h1><Link to={"/"}>Smart Store</Link></h1>
@@ -65,8 +81,8 @@ const Header = () => {
       </S.MeioHeader>
 
       <S.Navigation>
-        <button onClick={showSidebar}>
-          <FaBars/>
+        <button>
+          <FaBars onClick={showSidebar}/>
           {sidebar && <Sidebar active={setSidebar}/>} 
         </button>
         <ul>

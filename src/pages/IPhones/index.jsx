@@ -74,7 +74,7 @@ const IPhones = () => {
     var valorMinOrder = valorMin.sort()
     var valorMaxOrder = valorMax.sort()
 
-
+    
     if(preco.length > 0){
       novoArray = novoArray.filter(procurando => {
           return procurando.price > valorMinOrder[0] && procurando.price < valorMaxOrder[valorMaxOrder.length -1]
@@ -123,7 +123,7 @@ const IPhones = () => {
 
   useEffect(() => {
     filterAll(preco, armazenamento, cor, filterValue, filterName, display);    
-  }, [preco, armazenamento, cor, filterValue, filterName, display]);
+  }, [preco]);
 
   return (
     <>

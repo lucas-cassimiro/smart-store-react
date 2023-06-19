@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Footer from "../../components/footer";
+import Footer from "../../components/footer";
 import Header from "../../components/header";
 import Home from "../Home";
 import IPhones from "../IPhones";
@@ -26,7 +26,7 @@ const AppRouter = () => {
         <Route path="/fones-de-ouvido" element={<Fones/>} />
       </Routes>
 
-      {/* <Footer /> */}
+      <Footer />
 
     </BrowserRouter>
   );
