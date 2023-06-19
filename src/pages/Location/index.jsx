@@ -32,10 +32,10 @@ export function Location(){
   }
 
     return (
-        <div>
+        <S.Container>
                   <form onSubmit={handleCepChange}>
-                      <label htmlFor="">Informe um cep: </label>
-                      <input name="cep" value={inputCep} onChange={(e) => setInputCep(e.target.value)}/>
+                      <label htmlFor="">Informe seu cep</label>
+                      <input name="cep" value={inputCep} onChange={(e) => setInputCep(e.target.value)} placeholder="Digite aqui o seu cep"/>
                   </form>
 
                 {error && <p>erro</p>}
@@ -45,7 +45,7 @@ export function Location(){
                 {!error && <p>{cep.cep}</p>}  
                 {!error && <p>{cep.uf}</p>}
                 {!error && <p>{cep.ddd}</p>}
-                {!error && <p>O valor para {cep.uf} é {cep.price}</p>}
-          </div>
+                {!error && <p>{cep.price}</p>}
+          </S.Container>
     )
 }
