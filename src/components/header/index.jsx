@@ -70,13 +70,13 @@ const Header = () => {
             </S.IconsLink>
             </S.IconContainer>
 
-            <S.IconContainer>
+            {/* <S.IconContainer>
             <S.IconsLink to={"/"}>
               <img src={IconLogin} alt="Imagem do login" class="img-login" />
 
               <p>Login</p>
             </S.IconsLink>
-          </S.IconContainer>
+          </S.IconContainer> */}
         </S.CarrinhoELogin>
       </S.MeioHeader>
 
