@@ -28,15 +28,6 @@ export const Container = styled.main`
             padding-top: 1.5rem;
             border-bottom: 1px solid gray;
 
-            p {
-                background: red;
-                padding: 6px 20px;
-                border-radius: 8px;
-                text-align: center;
-                width: 100px;
-                font-weight: 700
-            }
-
             h4 {
                 margin-bottom; 0.5rem;
                 font-size: 1.125rem;

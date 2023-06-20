@@ -17,8 +17,8 @@ text-align: center;
     color: white;
     height: 30px;
     display: flex;
-    margin-top: 32px;
-    margin-left: 60px;
+    margin-top: 25px;
+    margin-left: 40px;
     cursor: pointer;
 }
 

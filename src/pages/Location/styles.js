@@ -23,4 +23,15 @@ export const Container = styled.div`
     p:nth-child(2) {
         margin-top: 10px;
     }
+
+    ul{
+        margin-top: 15px;
+    }
+
+    li {
+        p {
+            margin-top: 30px;
+        }
+    }
+
 `

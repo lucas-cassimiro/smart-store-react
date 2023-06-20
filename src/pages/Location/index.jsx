@@ -4,6 +4,8 @@ import getAddress from "../../services/handleApi";
 
 import * as S from "./styles"
 
+import { currencyFormat } from "../../helpers/currencyFormat";
+
 
 export function Location() {
     const [inputCep, setInputCep] = useState("");
@@ -60,13 +62,13 @@ export function Location() {
                     {cep.uf === "SP" || cep.uf === "RJ" ? (
                         <li>
                             <p>
-                                O valor para {cep.uf} é R$ {cep?.price} reais
+                                O frete para {cep.uf} é {currencyFormat(cep?.price)}
                             </p>
                         </li>
                     ) : null}
                 </ul>
             ) : (
-                <p>Por favor, informe um cep</p>
+                null
             )}
         </S.Container>
     );

@@ -75,7 +75,6 @@ export const DescriptionContainer = styled.div`
   }
 
   @media (max-width: 768px){
-
     div {
       gap: 7px;
 
@@ -89,7 +88,7 @@ export const DescriptionContainer = styled.div`
     }
 
     .discount-price {
-      font-size: 12px;
+      font-size: 14px;
     }
 
     .parcelas {
@@ -98,9 +97,7 @@ export const DescriptionContainer = styled.div`
   }
 
   @media (max-width: 420px){
-
     gap: 7px;
-
 
     div {
       display: block;
@@ -110,16 +107,11 @@ export const DescriptionContainer = styled.div`
         font-weight: 500;
         font-size: 13px;
       }
-
-      
-
-
     }
 
     h4 {
       font-size: 0.775rem;
     }
-
   }
 `;
 
@@ -170,9 +162,10 @@ export const Carrinho = styled.section`
   display: flex;
   justify-content: space-between;
   width: 210px;
+  align-items: center;
 
   @media (max-width: 420px){
-    width: 135px;
+    width: 120px;
   }
 
 

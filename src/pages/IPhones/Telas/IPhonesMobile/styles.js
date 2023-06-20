@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  position: relative;
+  
 
   ul {
     display: flex;
@@ -17,6 +17,7 @@ export const Container = styled.div`
         color: white;
         border: none;
         font-weight: 500;
+        font-size: 0.9375rem;
      }   
 
 
@@ -36,17 +37,18 @@ export const Container = styled.div`
         color: white;
         margin-bottom: 10px;
         margin-top: 10px;
-       // align-self: center;
+       margin-left: 15px;
       }
 
       label {
         display: none;
         color: white;
-      //  margin-left: 15px;
-       // align-self: center;
+
         input {
+          margin-left: 15px;
           display: none;
         }
+
       }
 
       svg {
@@ -78,7 +80,7 @@ export const Container = styled.div`
             color: white;
             height: 50px;
             margin-bottom: 550px;
-            margin-left: 60px;
+            margin-left: 210px;
             cursor: pointer;
           }
         }
@@ -150,5 +152,5 @@ export const Celulares = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  position: relative;
+  
 `;

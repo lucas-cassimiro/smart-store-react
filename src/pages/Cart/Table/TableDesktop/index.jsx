@@ -25,7 +25,6 @@ export function TableDesktop() {
           <tr>
             <th></th>
             <th>Produto</th>
-            <th>BlackFriday</th>
             <th>QTD</th>
             <th>Subtotal</th>
             <th></th>
@@ -40,9 +39,6 @@ export function TableDesktop() {
               <td>
                 <h4>{item.name}</h4>
                 <span>{currencyFormat(item.price)}</span>
-              </td>
-              <td>
-              {item.blackFriday && <p>{item.discount}%</p>}
               </td>
               <td>
                 <div>

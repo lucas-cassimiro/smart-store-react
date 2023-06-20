@@ -160,11 +160,17 @@ export const Container = styled.footer`
   }
 
   @media (max-width: 420px) {
+    padding: 32px 0;
     height: 23rem;
     justify-content: space-around;
 
     ul:first-child {
       gap: 8px;
+
+      li {
+        width: 127px;
+      }
+
     }
 
     ul:nth-child(2) {
@@ -186,7 +192,7 @@ export const Container = styled.footer`
       align-items: center;
       justify-content: center;
       width: 100%;
-      margin-top: 50px;
+      margin-top: 30px;
     }
   }
 `;

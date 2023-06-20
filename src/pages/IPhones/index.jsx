@@ -377,15 +377,27 @@
 // export default IPhones;
 
 
+import { Head } from "../../components/Head"
 import { Telas } from "./Telas"
 
 import * as S from "./styles"
 
 const IPhones = () => {
   return (
+
+    <S.Content>
+      <Head title="iPhones" />
+
+    
+
+
+
       <S.Container>
         <Telas />
       </S.Container>
+
+    </S.Content>
+
   )
 }
 

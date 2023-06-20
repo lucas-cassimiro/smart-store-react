@@ -2,20 +2,10 @@ import styled from "styled-components";
 
 export const Content = styled.section`
   h1 {
-    padding-top: 2rem;
-    padding-left: 3.25rem;
-    font-size: 1.3rem;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    font-size: 1rem;
     font-weight: 400;
-
-    @media (max-width: 800px) {
-      padding-left: 2rem;
-    }
-
-    @media (max-width: 420px) {
-      font-size: 1rem;
-      padding-left: 1.5rem;
-      padding-top: 1.5rem;
-    }
   }
 `;
 
