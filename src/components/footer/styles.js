@@ -149,7 +149,7 @@ export const Container = styled.footer`
   @media (max-width: 800px) {
     ul:nth-child(2) {
       div {
-        width: 200px;
+        width: 140px;
       }
       .div {
         div:first-child {
@@ -160,19 +160,8 @@ export const Container = styled.footer`
   }
 
   @media (max-width: 420px) {
-    height: 30rem;
-    padding: 20px 0;
-
-    div:last-child {
-      h2 {
-        margin-top: 50px;
-      }
-    }
-  }
-
-  @media (max-width: 376px) {
     height: 23rem;
-    justify-content: space-between;
+    justify-content: space-around;
 
     ul:first-child {
       gap: 8px;
@@ -197,6 +186,7 @@ export const Container = styled.footer`
       align-items: center;
       justify-content: center;
       width: 100%;
+      margin-top: 50px;
     }
   }
 `;

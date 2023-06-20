@@ -11,8 +11,8 @@ export function Location() {
     const [cep, setCep] = useState({});
 
     if (cep.uf === "SP" || cep.uf === "RJ") {
-        cep.price = 25;
-    }
+      cep.price = 25;
+  }
 
     async function handleCepChange(event) {
         event.preventDefault();
@@ -39,7 +39,7 @@ export function Location() {
   
     return (
       
-        <div>
+        <S.Container>
             <form onSubmit={handleCepChange}>
                 <label htmlFor="">Informe um cep: </label>
                 <input
@@ -68,7 +68,7 @@ export function Location() {
             ) : (
                 <p>Por favor, informe um cep</p>
             )}
-        </div>
+        </S.Container>
     );
 
 }

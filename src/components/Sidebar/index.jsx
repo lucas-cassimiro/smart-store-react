@@ -14,19 +14,19 @@ const Sidebar = ({ active }) => {
             <S.Content>
             <ol>
                 <li>
-                    <Link to="/iphones">iPhones</Link>
+                    <Link to="/iphones" onClick={closeSidebar}>iPhones</Link>
                 </li>
                 <li>
-                    <Link to="/android">Androids</Link>
+                    <Link to="/android" onClick={closeSidebar}>Androids</Link>
                 </li>
                 <li>
-                    <Link to="/smartwatch">Smartwatchs</Link>
+                    <Link to="/smartwatch" onClick={closeSidebar}>Smartwatchs</Link>
                 </li>
                 <li>
-                    <Link to="/fones-de-ouvido">Fones Bluetooth</Link>
+                    <Link to="/fones-de-ouvido" onClick={closeSidebar}>Fones Bluetooth</Link>
                 </li>
                 <li>
-                    <Link to="/blackfriday">Black Friday</Link>
+                    <Link to="/blackfriday" onClick={closeSidebar}>Black Friday</Link>
                 </li>
             </ol>
            </S.Content>
