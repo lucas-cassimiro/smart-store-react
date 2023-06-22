@@ -109,16 +109,10 @@ export function FonesDesktop(){
         return item.name.toLowerCase().includes(filterName.toLowerCase())
      })
     }
-    console.log(novoArray)
 
     if(display){
       novoArray = novoArray.slice(0, display)
     }
-
-
-   // console.log(novoArray)
-
-
 
     setProdutos(novoArray);
   };

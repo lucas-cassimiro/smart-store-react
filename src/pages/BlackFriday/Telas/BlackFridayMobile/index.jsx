@@ -6,11 +6,7 @@ import CardProducts from "../../../../components/cardProducts";
 
 import allProducts from "../../bfProductsData";
 
-import RiListered from "../../../../assets/img/ri-list-ordered.png";
-
 import { FaTimes } from "react-icons/fa";
-
-
 
 export function BlackFridayMobile() {
   const [preco, setPreco] = useState([]);
@@ -119,16 +115,10 @@ export function BlackFridayMobile() {
         return item.name.toLowerCase().includes(filterName.toLowerCase())
      })
     }
-    console.log(novoArray)
 
     if(display){
       novoArray = novoArray.slice(0, display)
     }
-
-
-   // console.log(novoArray)
-
-
 
     setProdutos(novoArray);
   };

@@ -6,8 +6,6 @@ import CardProducts from "../../../../components/cardProducts";
 
 import relogios from "../../smartwatchsProductsData";
 
-import RiListered from "../../../../assets/img/ri-list-ordered.png";
-
 import { FaTimes } from "react-icons/fa";
 
 
@@ -119,16 +117,10 @@ export function SmartwatchsMobile() {
         return item.name.toLowerCase().includes(filterName.toLowerCase())
      })
     }
-    console.log(novoArray)
 
     if(display){
       novoArray = novoArray.slice(0, display)
     }
-
-
-   // console.log(novoArray)
-
-
 
     setProdutos(novoArray);
   };

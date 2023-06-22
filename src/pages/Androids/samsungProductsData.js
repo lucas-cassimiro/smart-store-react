@@ -1,4 +1,3 @@
-import Iphone from "../../assets/img/image-iphone.png"
 import SamsungGalaxy from "../../assets/img/samsung-galaxy-s23-preto.avif"
 import SamsungGalaxyRoxo from "../../assets/img/samsung-galaxy-s22-5g.webp"
 import SamsungGalaxyAzul from "../../assets/img/samsung-galaxy-a04e-azul-64GB.webp"
