@@ -12,8 +12,9 @@ import SmartwatchBipLite from "../../assets/img/smartwatch-biplite-a1915.jpg"
 
 
 
-const celulares = [
+const relogios = [
   {
+    id: 1,
     name: "Smartband 8, ultra fino",
     price: 2999,
     img: SmartBrand8,
@@ -24,6 +25,7 @@ const celulares = [
     order: "procurados"
   },
   {
+    id: 2,
     name: "Xiaomi Mi Band 7",
     price: 1999,
     img: XiaomiMiBand,
@@ -34,6 +36,7 @@ const celulares = [
     order: "recentes"
   },
   {
+    id: 3,
     name: "Amazfit GTS 4 mini",
     price: 3999,
     img: Amazfit,
@@ -44,6 +47,7 @@ const celulares = [
     order: "vendidos"
   },
   {
+    id: 4,
     name: "Xiaomi Amazfit Bip A1608",
     price: 799,
     img: XiaomiAmazfit,
@@ -54,6 +58,7 @@ const celulares = [
     order: "procurados"
   },
   {
+    id: 5,
     name: "Smartwatch Amazfit Bip S",
     price: 6999,
     img: AmazfitBipS,
@@ -64,6 +69,7 @@ const celulares = [
     order: "recentes"
   },
   {
+    id: 6,
     name: "Smartwatch B5 Hero 7",
     price: 5999,
     img: SmartwatchHero,
@@ -74,6 +80,7 @@ const celulares = [
     order: "vendidos"
   },
   {
+    id: 7,
     name: "Smartwatch D20 Android",
     price: 5499,
     img: SmartwatchD20,
@@ -84,6 +91,7 @@ const celulares = [
     order: "procurados"
   },
   {
+    id: 8,
     name: "Smartwatch GT08",
     price: 1499,
     img: SmartwatchGT08,
@@ -94,6 +102,7 @@ const celulares = [
     order: "recentes"
   },
   {
+    id: 9,
     name: "Smartwatch Bip Lite A1915",
     price: 2999,
     img: SmartwatchBipLite,
@@ -105,4 +114,4 @@ const celulares = [
   }
 ];
 
-export default celulares
+export default relogios

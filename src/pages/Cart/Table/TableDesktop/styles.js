@@ -69,7 +69,6 @@ export const Container = styled.main`
 
                 img {
                     object-fit: cover;
-                    width: 7.5rem;
                     height: 7.5rem;
                     border-radius: 8px;
                 }

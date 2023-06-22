@@ -366,7 +366,7 @@ export function IPhoneDesktop(){
       <>
         <S.Celulares>
           {produtos.length >= 1 && produtos.map((product) => (
-            <CardProducts product={product} key={product.name} />
+            <CardProducts product={product} key={product.id} />
           ))}
           {produtos.length == 0 && <p>Produto não encontrado</p>}
         </S.Celulares>

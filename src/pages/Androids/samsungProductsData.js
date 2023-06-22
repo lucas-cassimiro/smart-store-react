@@ -142,6 +142,7 @@ const celulares = [
     blackFriday: true,
     rating: 4.5,
     storage: 64,
+    color: "Preto",
     order: "recentes"
   },
   {
@@ -153,6 +154,7 @@ const celulares = [
     blackFriday: true,
     rating: 4,
     storage: 128,
+    color: "Azul",
     order: "vendidos"
   }
 ];

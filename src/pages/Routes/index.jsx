@@ -8,6 +8,7 @@ import Androids from "../Androids";
 import { Location } from "../Location";
 import Smartwatchs from "../Smartwatchs";
 import Fones from "../FonesBlutetooth";
+import BlackFriday from "../BlackFriday";
 
 
 const AppRouter = () => {
@@ -24,6 +25,7 @@ const AppRouter = () => {
         <Route path="/localizacao" element={<Location/>} />
         <Route path="/smartwatch" element={<Smartwatchs/>} />
         <Route path="/fones-de-ouvido" element={<Fones/>} />
+        <Route path="/blackfriday" element={<BlackFriday/>}/>
       </Routes>
 
       <Footer />

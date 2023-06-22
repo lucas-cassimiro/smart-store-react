@@ -6,7 +6,7 @@ export const ContainerFiltro = styled.div`
 
   h1 {
     margin-top: 32px;
-    margin-left: 84px;
+    margin-left: 64px;
     font-size: 1rem;
     font-weight: 400;
 

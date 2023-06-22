@@ -60,13 +60,16 @@ const Header = () => {
         <S.CarrinhoELogin>
           <S.IconContainer>
             <S.IconsLink to={"/cart"}>
+              <div>
+
+            <S.BagQtd>{productsInCart.length}</S.BagQtd>
               <img
                 src={IconCarrinho}
                 alt="Imagem do carrinho"
                 class="img-carrinho"
                 
               />
-              <p>Cart: {productsInCart.length}</p>
+              </div>
             </S.IconsLink>
             </S.IconContainer>
 

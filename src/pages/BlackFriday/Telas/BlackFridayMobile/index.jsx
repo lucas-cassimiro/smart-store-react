@@ -4,7 +4,7 @@ import * as S from "./styles";
 
 import CardProducts from "../../../../components/cardProducts";
 
-import celulares from "../../iphoneProductsData";
+import allProducts from "../../bfProductsData";
 
 import RiListered from "../../../../assets/img/ri-list-ordered.png";
 
@@ -12,7 +12,7 @@ import { FaTimes } from "react-icons/fa";
 
 
 
-export function IPhoneMobile() {
+export function BlackFridayMobile() {
   const [preco, setPreco] = useState([]);
   const [armazenamento, setArmazenamento] = useState([]);
   const [cor, setCor] = useState([]);
@@ -70,7 +70,7 @@ export function IPhoneMobile() {
 
 
   const filterAll = (preco, armazenamento, cor, filterValue, filterName, display) => {
-    let novoArray = celulares;
+    let novoArray = allProducts;
 
     var valorMin = []
     var valorMax = []
@@ -141,7 +141,7 @@ export function IPhoneMobile() {
   return (
     <S.Container isOpen={showFilter}>
 
-    <h1><strong>Você está em: </strong>iPhones</h1>
+    <h1><strong>Você está em: </strong>Black Friday</h1>
       <ul>
 
     <button>

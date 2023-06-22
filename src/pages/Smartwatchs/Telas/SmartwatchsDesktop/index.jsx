@@ -5,7 +5,7 @@ import { Head } from "../../../../components/Head";
 import FilterOrdered from "../../../../assets/img/ri-list-ordered.png"
 import * as S from "./styles"
 
-import celulares from "../../smartwatchsProductsData";
+import relogios from "../../smartwatchsProductsData";
 
 export function SmartwatchsDesktop(){
   const [preco, setPreco] = useState([]);
@@ -60,7 +60,7 @@ export function SmartwatchsDesktop(){
 
 
   const filterAll = (preco, armazenamento, cor, filterValue, filterName, display) => {
-    let novoArray = celulares;
+    let novoArray = relogios;
 
     var valorMin = []
     var valorMax = []
@@ -371,7 +371,7 @@ export function SmartwatchsDesktop(){
       <>
         <S.Celulares>
           {produtos.length >= 1 && produtos.map((product) => (
-            <CardProducts product={product} key={product.name} />
+            <CardProducts product={product} key={product.id} />
           ))}
           {produtos.length == 0 && <p>Produto não encontrado</p>}
         </S.Celulares>

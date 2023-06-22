@@ -1,8 +1,7 @@
-
 import React, { useEffect, useState } from "react";
 
-import { AndroidDesktop } from "./AndroidsDesktop";
-import { AndroidMobile } from "./AndroidsMobile";
+import { BlackFridayDesktop } from "./BlackFridayDesktop";
+import { BlackFridayMobile } from "./BlackFridayMobile";
 
 
 export function Telas() {
@@ -25,5 +24,5 @@ export function Telas() {
       };
     }, []);
   
-    return windowWidth > 768 ? <AndroidDesktop /> : <AndroidMobile/>;
+    return windowWidth > 768 ? <BlackFridayDesktop /> : <BlackFridayMobile/>;
   }

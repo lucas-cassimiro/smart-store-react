@@ -154,6 +154,12 @@ export const IconsLink = styled(Link)`
   justify-content: center;
   width: 4rem;
 
+  div {
+    position: relative;
+  }
+
+
+
   p {
     color: #dcdcdc;
   }
@@ -236,13 +242,20 @@ export const Logo = styled.div`
     color: #fff;
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 40px;
     line-height: 30px;
   }
 
+  @media (max-width: 1024px){
+    h1 a {
+      font-size: 35px;
+    }
+  }
+
+
   @media (max-width: 420px){
     h1 a {
-      font-size: 21px;
+      font-size: 25px;
     }
   }
 
@@ -261,3 +274,19 @@ export const Botao = styled.button`
     display: block;
   }
 `
+
+export const BagQtd = styled.p`
+  position: absolute;
+  left: 13px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 900;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+`;

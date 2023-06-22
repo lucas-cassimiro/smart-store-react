@@ -11,7 +11,7 @@ export const Container = styled.section`
 
   h2 {
     max-width: 500px;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   img {

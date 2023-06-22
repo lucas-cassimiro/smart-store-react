@@ -4,7 +4,7 @@ import * as S from "./styles";
 
 import CardProducts from "../../../../components/cardProducts";
 
-import celulares from "../../fonesProductsData";
+import fones from "../../fonesProductsData";
 
 import RiListered from "../../../../assets/img/ri-list-ordered.png";
 
@@ -70,7 +70,7 @@ export function FonesMobile() {
 
 
   const filterAll = (preco, armazenamento, cor, filterValue, filterName, display) => {
-    let novoArray = celulares;
+    let novoArray = fones;
 
     var valorMin = []
     var valorMax = []
@@ -235,6 +235,7 @@ export function FonesMobile() {
               value="64"
               checked={armazenamento.includes("64")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             64 GB
           </label>
@@ -245,6 +246,7 @@ export function FonesMobile() {
               value="128"
               checked={armazenamento.includes("128")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             128 GB
           </label>
@@ -255,6 +257,7 @@ export function FonesMobile() {
               value="256"
               checked={armazenamento.includes("256")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             256 GB
           </label>
@@ -265,6 +268,7 @@ export function FonesMobile() {
               value="512"
               checked={armazenamento.includes("512")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             512 GB
           </label>
@@ -275,6 +279,7 @@ export function FonesMobile() {
               value="1024"
               checked={armazenamento.includes("1024")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             1 TB
           </label>
@@ -375,7 +380,7 @@ export function FonesMobile() {
 
       <S.Celulares>
         {produtos.length >= 1 && produtos.map((product) => (
-          <CardProducts product={product} key={product.name} />
+          <CardProducts product={product} key={product.id} />
         ))}
         {produtos.length == 0 && <p>Produto não encontrado</p>}
       </S.Celulares>

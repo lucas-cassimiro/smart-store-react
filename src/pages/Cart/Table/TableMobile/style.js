@@ -113,7 +113,7 @@ export const Container = styled.div`
       padding: 1rem;
 
       > div:first-child {
-        height: 15rem;
+        height: 20rem;
       }
 
       > div:last-child {

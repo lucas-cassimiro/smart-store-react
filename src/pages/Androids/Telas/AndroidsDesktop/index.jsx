@@ -7,8 +7,7 @@ import * as S from "./styles"
 
 import celulares from "../../samsungProductsData";
 
-
-export function AndroidsDesktop(){
+export function AndroidDesktop(){
   const [preco, setPreco] = useState([]);
   const [armazenamento, setArmazenamento] = useState([]);
   const [cor, setCor] = useState([]);
@@ -60,7 +59,7 @@ export function AndroidsDesktop(){
   }
 
 
-  const filtrarPorPrecoEArmazenamento = (preco, armazenamento, cor, filterValue, filterName, display) => {
+  const filterAll = (preco, armazenamento, cor, filterValue, filterName, display) => {
     let novoArray = celulares;
 
     var valorMin = []
@@ -76,7 +75,7 @@ export function AndroidsDesktop(){
     var valorMinOrder = valorMin.sort()
     var valorMaxOrder = valorMax.sort()
 
-
+    
     if(preco.length > 0){
       novoArray = novoArray.filter(procurando => {
           return procurando.price > valorMinOrder[0] && procurando.price < valorMaxOrder[valorMaxOrder.length -1]
@@ -110,13 +109,14 @@ export function AndroidsDesktop(){
         return item.name.toLowerCase().includes(filterName.toLowerCase())
      })
     }
+    console.log(novoArray)
 
     if(display){
       novoArray = novoArray.slice(0, display)
     }
 
 
-    console.log(novoArray)
+   // console.log(novoArray)
 
 
 
@@ -124,7 +124,7 @@ export function AndroidsDesktop(){
   };
 
   useEffect(() => {
-    filtrarPorPrecoEArmazenamento(preco, armazenamento, cor, filterValue, filterName, display);    
+    filterAll(preco, armazenamento, cor, filterValue, filterName, display);    
   }, [preco, armazenamento, cor, filterValue, filterName, display]);
 
   return (

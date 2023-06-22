@@ -10,7 +10,7 @@ import RiListered from "../../../../assets/img/ri-list-ordered.png";
 
 import { FaTimes } from "react-icons/fa";
 
-export function AndroidsMobile() {
+export function AndroidMobile() {
   const [preco, setPreco] = useState([]);
   const [armazenamento, setArmazenamento] = useState([]);
   const [cor, setCor] = useState([]);
