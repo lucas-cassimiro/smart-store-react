@@ -134,7 +134,7 @@ export const Images = styled.img`
   }
 
   @media (max-width: 420px){
-    width: 120px;
+     width: 140px;
   }
 
 

@@ -4,15 +4,13 @@ import * as S from "./styles";
 
 import CardProducts from "../../../../components/cardProducts";
 
-import celulares from "../../iphoneProductsData";
+import celulares from "../../samsungProductsData";
 
 import RiListered from "../../../../assets/img/ri-list-ordered.png";
 
 import { FaTimes } from "react-icons/fa";
 
-
-
-export function IPhoneMobile() {
+export function AndroidsMobile() {
   const [preco, setPreco] = useState([]);
   const [armazenamento, setArmazenamento] = useState([]);
   const [cor, setCor] = useState([]);
@@ -141,7 +139,7 @@ export function IPhoneMobile() {
   return (
     <S.Container isOpen={showFilter}>
 
-    <h1><strong>Você está em: </strong>iPhones</h1>
+    <h1><strong>Você está em: </strong>Androids</h1>
       <ul>
 
     <button>
@@ -375,7 +373,7 @@ export function IPhoneMobile() {
 
       <S.Celulares>
         {produtos.length >= 1 && produtos.map((product) => (
-          <CardProducts product={product} key={product.name} />
+          <CardProducts product={product} key={product.id} />
         ))}
         {produtos.length == 0 && <p>Produto não encontrado</p>}
       </S.Celulares>

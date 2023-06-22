@@ -4,7 +4,7 @@ import * as S from "./styles";
 
 import CardProducts from "../../../../components/cardProducts";
 
-import celulares from "../../iphoneProductsData";
+import celulares from "../../smartwatchsProductsData";
 
 import RiListered from "../../../../assets/img/ri-list-ordered.png";
 
@@ -12,7 +12,7 @@ import { FaTimes } from "react-icons/fa";
 
 
 
-export function IPhoneMobile() {
+export function SmartwatchsMobile() {
   const [preco, setPreco] = useState([]);
   const [armazenamento, setArmazenamento] = useState([]);
   const [cor, setCor] = useState([]);
@@ -141,7 +141,7 @@ export function IPhoneMobile() {
   return (
     <S.Container isOpen={showFilter}>
 
-    <h1><strong>Você está em: </strong>iPhones</h1>
+    <h1><strong>Você está em: </strong>Smartwatchs</h1>
       <ul>
 
     <button>
@@ -235,6 +235,7 @@ export function IPhoneMobile() {
               value="64"
               checked={armazenamento.includes("64")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             64 GB
           </label>
@@ -245,6 +246,7 @@ export function IPhoneMobile() {
               value="128"
               checked={armazenamento.includes("128")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             128 GB
           </label>
@@ -255,6 +257,7 @@ export function IPhoneMobile() {
               value="256"
               checked={armazenamento.includes("256")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             256 GB
           </label>
@@ -265,6 +268,7 @@ export function IPhoneMobile() {
               value="512"
               checked={armazenamento.includes("512")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             512 GB
           </label>
@@ -275,6 +279,7 @@ export function IPhoneMobile() {
               value="1024"
               checked={armazenamento.includes("1024")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             1 TB
           </label>

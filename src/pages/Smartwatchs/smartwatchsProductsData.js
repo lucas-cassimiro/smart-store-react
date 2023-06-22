@@ -1,143 +1,108 @@
 import Iphone from "../../assets/img/image-iphone.png"
 
+import SmartBrand8 from "../../assets/img/smartband8-ultra-fino.jpg"
+import XiaomiMiBand from "../../assets/img/xiaomi-mi-band7.jpg"
+import Amazfit from "../../assets/img/amazfit-gts-4-mini.jpg"
+import XiaomiAmazfit from "../../assets/img/xiaomi-amazfit-bip-a1608.jpg"
+import AmazfitBipS from "../../assets/img/smartwatch-amazfit-bipS.jpg"
+import SmartwatchHero from "../../assets/img/smartwatch-b57-hero.jpg"
+import SmartwatchD20 from "../../assets/img/smartwatch-d20-android.jpg"
+import SmartwatchGT08 from "../../assets/img/smartwatch-gt08.jpg"
+import SmartwatchBipLite from "../../assets/img/smartwatch-biplite-a1915.jpg"
 
-export const celulares = [
+
+
+const celulares = [
   {
-    name: "Samsung Galaxy S21 Ultra",
-    price: 4999,
-    img: Iphone,
-    discount: 25,
-    blackFriday: true,
-    rating: 4,
-    storage: 128,
-    color: "",
-  },
-  {
-    name: "Xiaomi Mi 11 Lite",
-    price: 1999,
-    img: Iphone,
-    discount: 30,
-    blackFriday: true,
-    rating: 4.5,
-    storage: 102,
-    color: ""
-  },
-  {
-    name: "OnePlus 9 Pro",
-    price: 6999,
-    img: Iphone,
-    discount: 0.20,
-    blackFriday: true,
-    rating: 4,
-    storage: 64,
-    color: ""
-  },
-  {
-    name: "Motorola Moto G Power",
-    price: 799,
-    img: Iphone,
-    discount: 10,
-    blackFriday: false,
-    rating: 3.5,
-    storage: 512
-  },
-  {
-    name: "Google Pixel 5",
-    price: 6999,
-    img: Iphone,
-    discount: 15,
-    blackFriday: true,
-    rating: 4.5,
-    storage: 64
-  },
-  {
-    name: "ASUS ROG Phone 5",
-    price: 5999,
-    img: Iphone,
-    discount: 20,
-    blackFriday: true,
-    rating: 4.5,
-    storage: 64
-  },
-  {
-    name: "Samsung Galaxy Note 20 Ultra",
-    price: 5499,
-    img: Iphone,
-    discount: 25,
-    blackFriday: true,
-    rating: 4,
-    storage: 128
-  },
-  {
-    name: "Xiaomi Redmi Note 10",
-    price: 1499,
-    img: Iphone,
-    discount: 30,
-    blackFriday: true,
-    rating: 4.5,
-    storage: 64
-  },
-  {
-    name: "OnePlus Nord 2",
+    name: "Smartband 8, ultra fino",
     price: 2999,
-    img: Iphone,
-    discount: 15,
-    blackFriday: true,
-    rating: 4,
-    storage: 64
-  },
-  {
-    name: "Motorola Razr 5G",
-    price: 6999,
-    img: Iphone,
-    discount: 30,
-    blackFriday: false,
-    rating: 3.5,
-    storage: 1024
-  },
-  {
-    name: "Google Pixel 4a",
-    price: 2799,
-    img: Iphone,
-    discount: 20,
-    blackFriday: true,
-    rating: 4.5,
-    storage: 64
-  },
-  {
-    name: "ASUS Zenfone 8",
-    price: 3499,
-    img: Iphone,
-    discount: 10,
-    blackFriday: false,
-    rating: 4,
-    storage: 512
-  },
-  {
-    name: "Samsung Galaxy A52",
-    price: 1899,
-    img: Iphone,
-    discount: 20,
-    blackFriday: true,
-    rating: 4,
-    storage: 128
-  },
-  {
-    name: "Xiaomi Poco X3 Pro",
-    price: 1399,
-    img: Iphone,
+    img: SmartBrand8,
     discount: 25,
     blackFriday: true,
-    rating: 4.5,
-    storage: 64
+    rating: 4,
+    color: "Preto",
+    order: "procurados"
   },
   {
-    name: "OnePlus 8T",
+    name: "Xiaomi Mi Band 7",
+    price: 1999,
+    img: XiaomiMiBand,
+    discount: 30,
+    blackFriday: false,
+    rating: 4.5,
+    color: "Preto",
+    order: "recentes"
+  },
+  {
+    name: "Amazfit GTS 4 mini",
     price: 3999,
-    img: Iphone,
+    img: Amazfit,
+    discount: 20,
+    blackFriday: true,
+    rating: 4,
+    color: "Preto",
+    order: "vendidos"
+  },
+  {
+    name: "Xiaomi Amazfit Bip A1608",
+    price: 799,
+    img: XiaomiAmazfit,
+    discount: 10,
+    blackFriday: false,
+    rating: 3.5,
+    color: "Preto",
+    order: "procurados"
+  },
+  {
+    name: "Smartwatch Amazfit Bip S",
+    price: 6999,
+    img: AmazfitBipS,
+    discount: 15,
+    blackFriday: true,
+    rating: 4.5,
+    color: "Preto",
+    order: "recentes"
+  },
+  {
+    name: "Smartwatch B5 Hero 7",
+    price: 5999,
+    img: SmartwatchHero,
+    discount: 20,
+    blackFriday: true,
+    rating: 4.5,
+    color: "Rosa",
+    order: "vendidos"
+  },
+  {
+    name: "Smartwatch D20 Android",
+    price: 5499,
+    img: SmartwatchD20,
+    discount: 25,
+    blackFriday: true,
+    rating: 4,
+    color: "Preto",
+    order: "procurados"
+  },
+  {
+    name: "Smartwatch GT08",
+    price: 1499,
+    img: SmartwatchGT08,
+    discount: 30,
+    blackFriday: false,
+    rating: 4.5,
+    color: "Preto",
+    order: "recentes"
+  },
+  {
+    name: "Smartwatch Bip Lite A1915",
+    price: 2999,
+    img: SmartwatchBipLite,
     discount: 15,
     blackFriday: true,
     rating: 4,
-    storage: 64
-}
+    color: "Azul",
+    order: "vendidos"
+  }
 ];
+
+export default celulares

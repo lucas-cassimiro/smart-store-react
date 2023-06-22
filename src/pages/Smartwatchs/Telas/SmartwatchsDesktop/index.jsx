@@ -1,18 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react"
 
-import * as S from "./styles";
+import CardProducts from "../../../../components/cardProducts"
+import { Head } from "../../../../components/Head";
+import FilterOrdered from "../../../../assets/img/ri-list-ordered.png"
+import * as S from "./styles"
 
-import CardProducts from "../../../../components/cardProducts";
+import celulares from "../../smartwatchsProductsData";
 
-import celulares from "../../iphoneProductsData";
-
-import RiListered from "../../../../assets/img/ri-list-ordered.png";
-
-import { FaTimes } from "react-icons/fa";
-
-
-
-export function IPhoneMobile() {
+export function SmartwatchsDesktop(){
   const [preco, setPreco] = useState([]);
   const [armazenamento, setArmazenamento] = useState([]);
   const [cor, setCor] = useState([]);
@@ -20,12 +15,7 @@ export function IPhoneMobile() {
   const [filterName, setFilterName] = useState('')
   const [display, setDisplay] = useState('')
   const [produtos, setProdutos] = useState([]);
-
-  const [showFilter, setShowFilter] = useState(false);
-
-  const filterOn = () => setShowFilter(!showFilter);
-
-
+  
   const handleChangePreco = (event) => {
     if(preco.includes(event.target.value)){
       const filtrado = preco.filter(valor => {
@@ -137,32 +127,70 @@ export function IPhoneMobile() {
     filterAll(preco, armazenamento, cor, filterValue, filterName, display);    
   }, [preco, armazenamento, cor, filterValue, filterName, display]);
 
-
   return (
-    <S.Container isOpen={showFilter}>
-
-    <h1><strong>Você está em: </strong>iPhones</h1>
-      <ul>
-
-    <button>
-      <li onClick={filterOn}>Filtrar ↑↓</li>
-    </button>
-    
-  
-
-        <div>
-          
+    <>
+        <S.ContainerFiltro>
+          <h1><strong>Você está em: </strong>Smartwatchs</h1>
+          <div>
+              <label htmlFor="ordenar">Ordenar:</label>
+              <select id="ordenar" onChange={handleFilterChange}>
+                <option value="">Selecione uma categoria</option>
+                <option value="procurados">Mais procurados</option>
+                <option value="recentes">Mais recentes</option>
+                <option value="vendidos">Mais vendidos</option>
+              </select>
+              <label htmlFor="exibir">Exibir:</label>
+              <select name="exibir" id="exibir" onChange={handleDisplay}>
+                <option value="20">20 por página</option>
+                <option value="19">19 por página</option>
+                <option value="18">18 por página</option>
+                <option value="17">17 por página</option>
+                <option value="16">16 por página</option>
+                <option value="15">15 por página</option>
+                <option value="14">14 por página</option>
+                <option value="13">13 por página</option>
+                <option value="12">12 por página</option>
+                <option value="11">11 por página</option>
+                <option value="10">10 por página</option>
+                <option value="9">9 por página</option>
+                <option value="8">8 por página</option>
+                <option value="7">7 por página</option>
+                <option value="6">6 por página</option>
+                <option value="5">5 por página</option>
+                <option value="4">4 por página</option>
+                <option value="3">3 por página</option>
+                <option value="2">2 por página</option>
+                <option value="1">1 por página</option>
+              </select>
+              <input type="text" placeholder="Pesquisar na categoria" value={filterName} onChange={handleNameItem}/>
+            </div>
+         </S.ContainerFiltro>
          
-        <h3>Filtrar produtos</h3>
-
-        <h3>Preço</h3>
-
+    <S.ContainerGlobal>
+      <Head title='Smartwatchs'/>
+      <S.FiltroContainer>
+        <S.CategoriasRelacionadas>
+          <h2>Categorias relacionadas</h2>
+          <div>
+            <p>Androids</p>
+            <p>Smartwatchs</p>
+            <p>Fones bluetooth</p>
+            <p>Acessórios</p>
+          </div>
+        </S.CategoriasRelacionadas>
+        <S.FilterByPrice>
+          <img src={FilterOrdered}/>
+          <h2>Filtrar por:</h2>
+        </S.FilterByPrice>
+        <S.Filtro>
+          <h3>Preço</h3>
+          
           <label>
             <input
               type="checkbox"
               name="preco"
               value="0-1000"
-              checked={preco.includes("0-1000")}
+              checked={preco.includes('0-1000')}
               onChange={handleChangePreco}
             />
             R$ 0 - R$1000
@@ -172,7 +200,7 @@ export function IPhoneMobile() {
               type="checkbox"
               name="preco"
               value="1001-2000"
-              checked={preco.includes("1001-2000")}
+              checked={preco.includes('1001-2000')}
               onChange={handleChangePreco}
             />
             R$ 1.001 - R$ 2.000
@@ -182,7 +210,7 @@ export function IPhoneMobile() {
               type="checkbox"
               name="preco"
               value="2001-3000"
-              checked={preco.includes("2001-3000")}
+              checked={preco.includes('2001-3000')}
               onChange={handleChangePreco}
             />
             R$ 2.001 - R$ 3.000
@@ -192,7 +220,7 @@ export function IPhoneMobile() {
               type="checkbox"
               name="preco"
               value="3001-4000"
-              checked={preco.includes("3001-4000")}
+              checked={preco.includes('3001-4000')}
               onChange={handleChangePreco}
             />
             R$ 3.001 - R$ 4.000
@@ -202,7 +230,7 @@ export function IPhoneMobile() {
               type="checkbox"
               name="preco"
               value="4001-5000"
-              checked={preco.includes("4001-5000")}
+              checked={preco.includes('4001-5000')}
               onChange={handleChangePreco}
             />
             R$ 4.001 - R$ 5.000
@@ -212,7 +240,7 @@ export function IPhoneMobile() {
               type="checkbox"
               name="preco"
               value="5001-6000"
-              checked={preco.includes("5001-6000")}
+              checked={preco.includes('5001-6000')}
               onChange={handleChangePreco}
             />
             R$ 5.001 - R$ 6.000
@@ -222,11 +250,13 @@ export function IPhoneMobile() {
               type="checkbox"
               name="preco"
               value="6001-7000"
-              checked={preco.includes("6001-7000")}
+              checked={preco.includes('6001-7000')}
               onChange={handleChangePreco}
             />
             R$ 6.001 - R$ 7.000
           </label>
+        </S.Filtro>
+        <S.Filtro>
           <h3>Armazenamento</h3>
           <label>
             <input
@@ -235,6 +265,7 @@ export function IPhoneMobile() {
               value="64"
               checked={armazenamento.includes("64")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             64 GB
           </label>
@@ -245,6 +276,7 @@ export function IPhoneMobile() {
               value="128"
               checked={armazenamento.includes("128")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             128 GB
           </label>
@@ -255,6 +287,7 @@ export function IPhoneMobile() {
               value="256"
               checked={armazenamento.includes("256")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             256 GB
           </label>
@@ -265,6 +298,7 @@ export function IPhoneMobile() {
               value="512"
               checked={armazenamento.includes("512")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             512 GB
           </label>
@@ -275,9 +309,12 @@ export function IPhoneMobile() {
               value="1024"
               checked={armazenamento.includes("1024")}
               onChange={handleChangeArmazenamento}
+              disabled
             />
             1 TB
           </label>
+        </S.Filtro>
+        <S.Filtro>
           <h3>Cor</h3>
           <label>
             <input
@@ -313,11 +350,11 @@ export function IPhoneMobile() {
             <input
               type="checkbox"
               name="cor"
-              value="roxo"
-              checked={cor.includes("roxo")}
+              value="rosa"
+              checked={cor.includes("rosa")}
               onChange={handleChangeCor}
             />
-            Roxo
+            Rosa
           </label>
           <label>
             <input
@@ -329,56 +366,17 @@ export function IPhoneMobile() {
             />
             Dourado
           </label>
-          
-               <FaTimes onClick={filterOn}/>
-          
-      </div>
-
-
-          <S.Content>
-            <label htmlFor="ordenar">Ordenar</label>
-              <select name="ordenar"   id="ordenar" onChange={handleFilterChange}>
-                <option value="">Selecione uma categoria</option>
-                <option value="procurados">Mais procurados</option>
-                <option value="recentes">Mais recentes</option>
-                <option value="vendidos">Mais vendidos</option>
-              </select>
-
-          <label htmlFor="exibir">Exibir</label>
-              <select name="exibir" id="exibir" onChange={handleDisplay}>
-                <option value="20">20 por página</option>
-                <option value="19">19 por página</option>
-                <option value="18">18 por página</option>
-                <option value="17">17 por página</option>
-                <option value="16">16 por página</option>
-                <option value="15">15 por página</option>
-                <option value="14">14 por página</option>
-                <option value="13">13 por página</option>
-                <option value="12">12 por página</option>
-                <option value="11">11 por página</option>
-                <option value="10">10 por página</option>
-                <option value="9">9 por página</option>
-                <option value="8">8 por página</option>
-                <option value="7">7 por página</option>
-                <option value="6">6 por página</option>
-                <option value="5">5 por página</option>
-                <option value="4">4 por página</option>
-                <option value="3">3 por página</option>
-                <option value="2">2 por página</option>
-                <option value="1">1 por página</option>
-              </select>
-       
-              <input type="text" placeholder="Pesquisar na categoria" value={filterName} onChange={handleNameItem}/>
-
-          </S.Content>
-      </ul>
-
-      <S.Celulares>
-        {produtos.length >= 1 && produtos.map((product) => (
-          <CardProducts product={product} key={product.name} />
-        ))}
-        {produtos.length == 0 && <p>Produto não encontrado</p>}
-      </S.Celulares>
-    </S.Container>
+        </S.Filtro>
+      </S.FiltroContainer>
+      <>
+        <S.Celulares>
+          {produtos.length >= 1 && produtos.map((product) => (
+            <CardProducts product={product} key={product.name} />
+          ))}
+          {produtos.length == 0 && <p>Produto não encontrado</p>}
+        </S.Celulares>
+      </>
+    </S.ContainerGlobal>
+    </>
   );
-}
+};

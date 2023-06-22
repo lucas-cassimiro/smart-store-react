@@ -4,7 +4,7 @@ import * as S from "./styles";
 
 import CardProducts from "../../../../components/cardProducts";
 
-import celulares from "../../iphoneProductsData";
+import celulares from "../../fonesProductsData";
 
 import RiListered from "../../../../assets/img/ri-list-ordered.png";
 
@@ -12,7 +12,7 @@ import { FaTimes } from "react-icons/fa";
 
 
 
-export function IPhoneMobile() {
+export function FonesMobile() {
   const [preco, setPreco] = useState([]);
   const [armazenamento, setArmazenamento] = useState([]);
   const [cor, setCor] = useState([]);
@@ -141,7 +141,7 @@ export function IPhoneMobile() {
   return (
     <S.Container isOpen={showFilter}>
 
-    <h1><strong>Você está em: </strong>iPhones</h1>
+    <h1><strong>Você está em: </strong>Fones Bluetooth</h1>
       <ul>
 
     <button>
