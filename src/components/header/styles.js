@@ -86,6 +86,7 @@ export const Localizacao = styled.div`
 
   a {
     color: #a0a0a0;
+    cursor: pointer;
   }
 
   img {
