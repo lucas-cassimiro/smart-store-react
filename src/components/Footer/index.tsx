@@ -1,10 +1,13 @@
+import * as S from "./styles"
+
 import IconFacebook from "../../assets/img/icon-facebook.png";
 import IconInstagram from "../../assets/img/icon-instagram.png";
 import IconTwitter from "../../assets/img/icon-twitter.png";
 import IconTiktok from "../../assets/img/icon-tiktok.png";
 import IconBaixeAqui from "../../assets/img/icone-baixe-aqui.svg"
 
-import * as S from "./styles"
+
+
 
 const Footer = () => {
   return (

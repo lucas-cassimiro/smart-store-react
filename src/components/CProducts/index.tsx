@@ -1,13 +1,18 @@
-import React from "react";
 import * as S from "./styles.js";
-import HalfRating from "../rating/index.jsx";
+import HalfRating from "../Rating/index.jsx";
 import { useCartContext } from "../../context/CartContext/index.jsx";
 import { currencyFormat } from "../../helpers/currencyFormat.js";
 
 import { BsFillCartPlusFill } from "react-icons/bs";
 
-const CardProducts = ({ product }) => {
-  const { addAndEditProductsInCart, removeProductsInCart } = useCartContext();
+import { ProductsData } from "../../interfaces/ProductProps.js";
+
+interface ProductProps {
+  product: ProductsData
+}
+
+export default function CardProducts({ product }: ProductProps){
+  const { addAndEditProductsInCart } = useCartContext();
 
   return (
     <S.CardDiv>
@@ -27,8 +32,8 @@ const CardProducts = ({ product }) => {
         {product.blackFriday && (
           <S.Carrinho>
             <p className="discount-price">
-              {currencyFormat(
-                ((product.price * (100 - product.discount)) / 100).toFixed(2)
+            {currencyFormat(
+                ((product.price * (100 - product.discount)) / 100)
               )}
             </p>
             <S.Button
@@ -69,4 +74,4 @@ const CardProducts = ({ product }) => {
   );
 };
 
-export default CardProducts;
+// export default CardProducts;

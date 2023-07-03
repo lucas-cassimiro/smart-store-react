@@ -20,12 +20,28 @@
     "react-router-dom": "^6.9.0",
     "sort-by": "^1.2.0",
     "styled-components": "^5.3.9",
-    "swiper": "^9.1.1"
+    "swiper": "^9.1.1",
+    "web-vitals": "^3.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^5.1.6",
     "vite": "^4.2.0"
-  }
+  },
+  "description": "<h1 align=\"center\"><strong>Projeto Smart Store</strong></h1>\r <p>O projeto Smart Store foi criado e desenvolvido por Lucas Cassimiro. Este projeto é um E-Commerce feito com as ferramentas: ReactJs, JavaScript, Styled-components, Context API e controle de versão GIT. O projeto conta com um design moderno e intuitivo, visando uma ótima experiência do usuário. Fácil de mexer, o projeto conta com funcionalidades como: carrosséis de itens, filtrar de itens por preço, cor e armazenamento, carrinho de compras e busca por CEP e cálculo automático de frete.\r O projeto foi inteiro desenvolvido com responsividade, nas telas de: 1920px, 1440px, 1366px, 1024px, 768px, 420px e 375px.\r OBS: O responsivo foi feito para as telas mais utilizadas, apenas alguns tamanhos de tela não foram definidos!</p>\r <br>",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucas-cassimiro/smart-store-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucas-cassimiro/smart-store-react/issues"
+  },
+  "homepage": "https://github.com/lucas-cassimiro/smart-store-react#readme"
 }

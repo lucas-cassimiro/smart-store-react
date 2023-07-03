@@ -4,7 +4,7 @@ import { SwiperSlide } from "swiper/react";
 import Swiper, { Navigation, Pagination, A11y, Autoplay } from "swiper";
 // import Swiper, { Navigation, Pagination, A11y} from "swiper";
 import { products } from "./blackFridayProductsData";
-import CardProducts from "../../cardProducts";
+import CardProducts from "../../CProducts";
 import SwiperSwitchButton from "../SwiperSwitchButton";
 
 const SwiperBlackFridayProducts = () => {

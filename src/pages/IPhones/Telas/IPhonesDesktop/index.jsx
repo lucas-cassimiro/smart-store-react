@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
 
-import CardProducts from "../../../../components/cardProducts"
+import  CardProducts from "../../../../components/CProducts"
 import { Head } from "../../../../components/Head";
 import FilterOrdered from "../../../../assets/img/ri-list-ordered.png"
 import * as S from "./styles"

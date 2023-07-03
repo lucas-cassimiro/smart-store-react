@@ -1,5 +1,5 @@
 import React from "react";
-import { Head } from "../../components/Head/index.jsx";
+import { Head } from "../../components/Head/index";
 import * as S from "./styles";
 import { Table } from "./Table";
 

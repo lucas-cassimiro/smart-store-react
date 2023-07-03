@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import * as S from "./styles";
 
-import CardProducts from "../../../../components/cardProducts";
+import CardProducts from "../../../../components/CProducts";
 
 import celulares from "../../iphoneProductsData";
 

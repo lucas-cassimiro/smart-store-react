@@ -4,8 +4,8 @@ import BannerWpp from "../../assets/img/banner-wpp.png";
 import SwipperBannerHeader from "../../components/Swipers/SwiperBannerHeader";
 import SwiperNewsProducts from "../../components/Swipers/SwiperNewsProducts";
 import SwiperBlackFridayProducts from "../../components/Swipers/SwiperBlackFridayProducts";
-import { Head } from "../../components/Head/index.jsx";
-import { BannerWppp, BannerNovidades } from "../../components/Banners/index.jsx";
+import { Head } from "../../components/Head/index";
+import { BannerWppp, BannerNovidades } from "../../components/Banners/index";
 
 const Home = () => {
   return (
